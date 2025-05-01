@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+	    @keyframes shakeTestTube {
+            0% { transform: rotate(0deg) translateX(0); }
+            20% { transform: rotate(-7deg) translateX(3px); }
+            40% { transform: rotate(7deg) translateX(-3px); }
+            60% { transform: rotate(-7deg) translateX(3px); }
+            80% { transform: rotate(7deg) translateX(-3px); }
+            100% { transform: rotate(0deg) translateX(0); }
+        }
+
+        .shake {
+            animation: shakeTestTube 0.5s ease-in-out 5;
+        }
+
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+    <div id="main"> 
+      <div id="myhead"><p id="masteps">If Benedict test shows no color change, we proceed with the Non-Reducing Sugar test. To begin, click on the sample beaker to add 2mL of the sample solution to the test tube. </p> <a id="nextstep" class="btn btn-success dsphdd" href="Benedict-RS-dtl.html">Result Analysis.</a>
+      </div>
+      <hr> 
+
+	  
+	  
+	  <img src="imgs3/out02.png" id="out02X" class="dsphdd" style="position: absolute;width: auto;margin-top: 135px;margin-left:125px;height: 225px;z-index:2;">
+	  <img src="imgs3/out11.png" id="out11X" class="dsphdd" style="position: absolute;width: auto;margin-top: 135px;margin-left:125px;height: 225px;z-index:2;">
+	  <img src="imgs3/dtl2.png" id="dtl2" class="dsphdd" style="position: absolute;width: auto;margin-top: 135px;margin-left:125px;height: 225px;z-index:2;">
+	  <img src="imgs3/dtl3.png" id="dtl3" class="dsphdd" style="position: absolute;width: auto;margin-top: 135px;margin-left:125px;height: 225px;z-index:2;">
+	  <img src="imgs3/dtl4.png" id="dtl4" class="dsphdd" style="position: absolute;width: auto;margin-top: 135px;margin-left:125px;height: 225px;z-index:2;">
+	  <img src="imgs3/dtl5.png" id="dtl5" class="dsphdd" style="position: absolute;width: auto;margin-top: 135px;margin-left:125px;height: 225px;z-index:2;">
+
+
+	  <img src="imgs3/wtrbth.png" id="wtrbth" class="dsphd" style="position: absolute;height: auto;margin-top: 205px;margin-left:37px;width: 150px;z-index:2;">
+	  <img src="imgs3/brnNet.png" id="brnNet" class="dsphd" style="position: absolute;height: auto;margin-top: 322px;margin-left:0px;width: 225px;z-index: 1;">
+	  <img src="imgs3/brnstd.png" id="brnstd" class="dsphd" style="position: absolute;width: auto;margin-top: 332px;margin-left:0px;height: 200px;">
+	  <img src="imgs3/fire.gif" id="fire" class="dsphd" style="position: absolute;width: auto;margin-top: 365px;margin-left:78px;height: 60px;">
+	  <img src="imgs3/firstd.png" id="firstd" class="dsphd" style="position: absolute;width: auto;margin-top: 425px;margin-left:47px;height: 100px;">
+
+
+	  <button onclick="step3();" id="step3" style="position: absolute;width: auto;margin-top: 300px;margin-left:285px;height: 225px;width:65px;background:transparent;border:none;z-index: 1;"></button>
+	  <img src="imgs3/push.png" id="push1" class="dsphdd" style="position: absolute;width: auto;margin-top: 65px;margin-left:315px;height: 21px;z-index: 3;">
+	  <img src="imgs3/push.png" id="push1X" class="dsphdd" style="position: absolute;width: auto;margin-top: 87px;margin-left:600px;height: 21px;z-index: 3;">
+	  <img src="imgs3/drop.png" id="drop" class="dsphdd" style="position: absolute;width: auto;margin-top: 400px;margin-left:316px;height: 51px;z-index: 3;">
+	  <img src="imgs3/PPT0.png" id="PPT00" class="dsphdd" style="position: absolute;width: auto;margin-top: 50px;margin-left:300px;height: 350px;">
+	  <img src="imgs3/PPT3.png" id="PPT3a" class="dsphdd" style="position: absolute;width: auto;margin-top: 50px;margin-left:300px;height: 350px;">
+	  <img src="imgs3/PPT3.png" id="PPT3aX" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:455px;height: 350px; transform: rotate(60deg)">
+	  <img src="imgs3/PPT0.png" id="PPT01" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:455px;height: 350px; transform: rotate(60deg)">
+	  <img src="imgs3/drop.png" id="dropX" class="dsphdd" style="position: absolute;width: auto;margin-top: 262px;margin-left:316px;height: 51px;">
+	  <img src="imgs3/PPT2.png" id="PPT2" class="dsphdd" style="position: absolute;width: auto;margin-top: 50px;margin-left:300px;height: 350px;">
+
+
+
+	  <img src="imgs3/TBblk.png" id="TBblk" class="dsphd" style="position: absolute;width: auto;margin-top: 300px;margin-left:300px;height: 225px;">
+	  <img src="imgs3/out0.png" id="out0" class="dsphdd" style="position: absolute;width: auto;margin-top: 300px;margin-left:300px;height: 225px;">
+	  <img src="imgs3/out01.png" id="out01" class="dsphdd" style="position: absolute;width: auto;margin-top: 300px;margin-left:300px;height: 225px;">
+	  <img src="imgs3/out02.png" id="out02" class="dsphdd" style="position: absolute;width: auto;margin-top: 300px;margin-left:300px;height: 225px;">
+	  <img src="imgs3/out1.png" id="out1" class="dsphdd" style="position: absolute;width: auto;margin-top: 300px;margin-left:300px;height: 225px;">
+	  <img src="imgs3/out11.png" id="out11" class="dsphdd" style="position: absolute;width: auto;margin-top: 300px;margin-left:300px;height: 225px;">
+	  <img src="imgs3/dtl2.png" id="dtlx2" class="dsphdd" style="position: absolute;width: auto;margin-top: 300px;margin-left:300px;height: 225px;">
+	  <img src="imgs3/dtl3.png" id="dtlx3" class="dsphdd" style="position: absolute;width: auto;margin-top: 300px;margin-left:300px;height: 225px;">
+	  <img src="imgs3/dtl4.png" id="dtlx4" class="dsphdd" style="position: absolute;width: auto;margin-top: 300px;margin-left:300px;height: 225px;">
+	  <img src="imgs3/dtl5.png" id="dtlx5" class="dsphdd" style="position: absolute;width: auto;margin-top: 300px;margin-left:300px;height: 225px;">
+	  
+	  
+	  <button onclick="step5();" id="step5" style="position: absolute;width: auto;margin-top: 300px;margin-left:375px;width: 110px;height:225px; z-index: 2;background:transparent ;border: none;"></button>
+	  <img src="imgs3/push.png" id="push2" class="dsphdd" style="position: absolute;width: auto;margin-top: 165px;margin-left:423px;height: 21px;z-index: 2;">
+	  <img src="imgs3/PPT1.png" id="PPT1a" class="dsphdd" style="position: absolute;width: auto;margin-top: 152px;margin-left:408px;height: 350px;z-index: 1;">
+	  <img src="imgs3/regC.png" id="regC" class="dsphd" style="position: absolute;width: auto;margin-top: 300px;margin-left:375px;height: 225px;">
+	  <img src="imgs3/regO.png" id="regO" class="dsphdd" style="position: absolute;width: auto;margin-top: 300px;margin-left:375px;height: 225px;">
+
+
+	  <button onclick="step4();" id="step4" style="position: absolute;width: auto;margin-top: 300px;margin-left:500px;width: 110px;height:225px; z-index: 2;background:transparent ;border: none;"></button>
+	  <img src="imgs3/push.png" id="push3" class="dsphdd" style="position: absolute;width: auto;margin-top: 165px;margin-left:548px;height: 21px;z-index: 2;">
+	  <img src="imgs3/PPT1.png" id="PPT1b" class="dsphdd" style="position: absolute;width: auto;margin-top: 152px;margin-left:533px;height: 350px;z-index: 1;">
+	  <img src="imgs3/naohC.png" id="naohC" class="dsphd" style="position: absolute;width: auto;margin-top: 300px;margin-left:500px;height: 225px;">
+	  <img src="imgs3/naohO.png" id="naohO" class="dsphdd" style="position: absolute;width: auto;margin-top: 300px;margin-left:500px;height: 225px;">
+
+
+	  
+	  <button onclick="step2();" id="step2" style="position: absolute;width: auto;margin-top: 350px;margin-left:625px;height: 175px;width:140px;background: transparent;border: none;z-index: 1;"></button>
+	  <img src="imgs3/push.png" id="push4" class="dsphdd" style="position: absolute;width: auto;margin-top: 168px;margin-left:690px;height: 21px;z-index: 1;">
+	  <img src="imgs3/PPT0.png" id="PPT0a" class="dsphdd" style="position: absolute;width: auto;margin-top: 155px;margin-left:675px;height: 350px;">
+	  <img src="imgs3/PPT3.png" id="PPT3b" class="dsphdd" style="position: absolute;width: auto;margin-top: 155px;margin-left:675px;height: 350px;">
+	  <img src="imgs3/hcl.png" id="hcl" class="dsphd" style="position: absolute;width: auto;margin-top: 350px;margin-left:625px;height: 175px;">
+
+
+	  <button onclick="step1();" id="step1" style="position: absolute;width: auto;margin-top: 350px;margin-left:775px;height: 175px;width:140px;background: transparent;border: none;z-index: 1;"></button>
+	  <img src="imgs3/push.png" id="push5" class="dsphdd" style="position: absolute;width: auto;margin-top: 168px;margin-left:840px;height: 21px;z-index: 1;">
+	  <img src="imgs3/PPT0.png" id="PPT0b" class="dsphdd" style="position: absolute;width: auto;margin-top: 155px;margin-left:825px;height: 350px;">
+	  <img src="imgs3/PPT3.png" id="PPT3c" class="dsphdd" style="position: absolute;width: auto;margin-top: 155px;margin-left:825px;height: 350px;">
+	  <img src="imgs3/smpl.png" id="smpl" class="dsphd" style="position: absolute;width: auto;margin-top: 350px;margin-left:775px;height: 175px;">
+	  
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 80px;margin-top: 535px;">Burner</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 0px;margin-top: 170px;">Hot Water</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 285px;margin-top: 535px;">Test Tube</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 370px;margin-top: 535px;">Benedict Reagent</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 530px;margin-top: 535px;">NaOH</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 675px;margin-top: 535px;">HCL</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 820px;margin-top: 535px;">Sample</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 920px;margin-top: 535px;">Pipette</span>
+
+	  
+
+	  <button onclick="stepX();" id="stepX" style="position: absolute;width: auto;margin-top: 175px;margin-left:925px;height: 350px;width:50px;background: transparent;border: none;z-index: 1;"></button>
+	  <img src="imgs3/PPT0.png" id="PPT0X" class="dsphd" style="position: absolute;width: auto;margin-top: 175px;margin-left:925px;height: 350px;">
+	  
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+function step1()
+{
+	$("#PPT0X").addClass("dsphdd");
+	$("#PPT0b").removeClass("dsphdd");
+	setTimeout(function() {
+	  $("#push5").removeClass("dsphdd");
+	}, 400);
+	setTimeout(function() {
+		$("#PPT0b").addClass("dsphdd");
+	  $("#PPT3c").removeClass("dsphdd");
+	}, 600);
+	setTimeout(function() {
+		$("#push5").addClass("dsphdd");
+	}, 1000);
+		setTimeout(function() {
+		$("#PPT3c").addClass("dsphdd");
+		$("#PPT3a").removeClass("dsphdd");
+	}, 1200);
+		setTimeout(function() {
+		$("#push1").removeClass("dsphdd");
+		$("#drop").removeClass("dsphdd");
+	}, 1600);
+	setTimeout(function() {
+		$("#TBblk").addClass("dsphdd");
+		$("#out0").removeClass("dsphdd");
+		$("#drop").addClass("dsphdd");
+		$("#push1").addClass("dsphdd");
+	}, 2000);
+	setTimeout(function() {
+		$("#PPT3a").addClass("dsphdd");
+		$("#PPT00").removeClass("dsphdd");
+	}, 2400);
+		setTimeout(function() {
+		$("#PPT00").addClass("dsphdd");
+		$("#PPT0X").removeClass("dsphdd");
+		$("#masteps").text("Now, add 2mL of HCl solution into test tube. For this, click on the HCl beaker. ");
+
+	}, 2800);
+
+	step=1;
+}
+
+
+function step2()
+{
+
+	if (step==1)
+	 {
+	 	$("#PPT0X").addClass("dsphdd");
+		$("#PPT0a").removeClass("dsphdd");
+		setTimeout(function() {
+		  $("#push4").removeClass("dsphdd");
+		}, 400);
+		setTimeout(function() {
+			$("#PPT0a").addClass("dsphdd");
+		  $("#PPT3b").removeClass("dsphdd");
+		}, 600);
+		setTimeout(function() {
+			$("#push4").addClass("dsphdd");
+		}, 1000);
+			setTimeout(function() {
+			$("#PPT3b").addClass("dsphdd");
+			$("#PPT3a").removeClass("dsphdd");
+		}, 1200);
+			setTimeout(function() {
+			$("#push1").removeClass("dsphdd");
+			$("#drop").removeClass("dsphdd");
+		}, 1600);
+		setTimeout(function() {
+			$("#out0").addClass("dsphdd");
+			$("#out01").removeClass("dsphdd");
+			$("#drop").addClass("dsphdd");
+			$("#push1").addClass("dsphdd");
+		}, 2000);
+		setTimeout(function() {
+			$("#PPT3a").addClass("dsphdd");
+			$("#PPT00").removeClass("dsphdd");
+		}, 2400);
+			setTimeout(function() {
+			$("#PPT00").addClass("dsphdd");
+			$("#PPT0X").removeClass("dsphdd");
+			$("#masteps").text("Now, click on the test tube to mix the solutions thoroughly and place it in a water bath for 5-10 minutes.");
+		}, 2800);
+
+			step=2;
+	 }
+}
+
+function step3()
+{
+	if (step==2) 
+	{
+		$("#out01").addClass("shake");
+		setTimeout(function() {
+		$("#out01").fadeOut(800, function () {
+            $(this).addClass("dsphdd");
+        });
+        $("#out02").removeClass("dsphdd").hide().fadeIn(800);
+		}, 2500);
+		setTimeout(function() {
+				$("#out02").addClass("dsphdd");
+				$("#out02X").removeClass("dsphdd");
+		}, 4000);
+
+		setTimeout(function() {
+				$("#out02").removeClass("dsphdd");
+				$("#out02X").addClass("dsphdd");
+				$("#masteps").text("Now, click on the NaOH bottle to add a few drops into the test tube.");
+				
+		}, 10000);
+
+		step=3;
+	}
+
+
+	var reslt = Math.floor(Math.random() * 3) + 2;
+	if (step==5) 
+	{
+		$("#out1").addClass("shake");
+		setTimeout(function() {
+		$("#out1").fadeOut(800, function () {
+            $(this).addClass("dsphdd");
+        });
+        $("#out11").removeClass("dsphdd").hide().fadeIn(800);
+		}, 2500);
+		setTimeout(function() {
+			$("#out11").addClass("dsphdd");
+			$("#out11X").removeClass("dsphdd");
+		}, 4000);
+		
+		setTimeout(function() {
+		$("#out11X").fadeOut(800, function () {
+            $(this).addClass("dsphdd");
+        });
+        $("#dtl"+reslt).removeClass("dsphdd").hide().fadeIn(800);
+		}, 8000);
+
+		setTimeout(function() {
+			$("#dtl"+reslt).addClass("dsphdd");
+			$("#dtlx"+reslt).removeClass("dsphdd");
+			$("#nextstep").removeClass("dsphdd");
+			$("#masteps").text("Now, click on the Result Analysis button to view the interpretation of results.");
+		}, 10000);
+
+		step=6;
+	}
+
+
+
+}
+
+
+function step4()
+{
+	if (step==3) 
+	{
+		$("#naohC").addClass("dsphdd");
+		$("#naohO").removeClass("dsphdd");
+		setTimeout(function() {
+				$("#PPT0X").addClass("dsphdd");
+				$("#PPT1b").removeClass("dsphdd");
+		}, 400);
+		setTimeout(function() {
+				$("#push3").removeClass("dsphdd");
+		}, 700);
+		setTimeout(function() {
+				$("#push3").addClass("dsphdd");
+		}, 1500);
+		setTimeout(function() {
+				$("#PPT1b").addClass("dsphdd");
+				$("#PPT3aX").removeClass("dsphdd");
+		}, 2000);
+		setTimeout(function() {
+				$("#push1X").removeClass("dsphdd");
+				$("#dropX").removeClass("dsphdd");
+		}, 2300);
+		setTimeout(function() {
+				$("#push1X").addClass("dsphdd");
+				$("#dropX").addClass("dsphdd");
+				$("#PPT3aX").addClass("dsphdd");
+				$("#PPT01").removeClass("dsphdd");
+		}, 3000);
+				setTimeout(function() {
+				$("#PPT01").addClass("dsphdd");
+				$("#PPT0X").removeClass("dsphdd");
+				$("#masteps").text("Now, click on the Benedict Reagent bottle to add 2ml of it into the test tube.");
+		}, 3400);
+
+				step=4;
+	}
+
+}
+
+
+function step5()
+{
+	if (step==4) 
+	{
+		$("#regC").addClass("dsphdd");
+		$("#regO").removeClass("dsphdd");
+		setTimeout(function() {
+				$("#PPT0X").addClass("dsphdd");
+				$("#PPT1a").removeClass("dsphdd");
+		}, 400);
+		setTimeout(function() {
+				$("#push2").removeClass("dsphdd");
+		}, 700);
+		setTimeout(function() {
+				$("#push2").addClass("dsphdd");
+		}, 1500);
+		setTimeout(function() {
+				$("#PPT1a").addClass("dsphdd");
+				$("#PPT2").removeClass("dsphdd");
+		}, 2000);
+		setTimeout(function() {
+				$("#push1").removeClass("dsphdd");
+				$("#drop").removeClass("dsphdd");
+		}, 2300);
+		setTimeout(function() {
+				$("#push1").addClass("dsphdd");
+				$("#drop").addClass("dsphdd");
+				$("#PPT0X").removeClass("dsphdd");
+				$("#PPT2").addClass("dsphdd");
+				$("#out02").addClass("dsphdd");
+				$("#out1").removeClass("dsphdd");
+				$("#masteps").text("Now, click on the test tube to mix the solutions thoroughly and place it in a water bath for 3-5 minutes.");
+		}, 3000);
+
+		step=5;
+	}
+
+}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

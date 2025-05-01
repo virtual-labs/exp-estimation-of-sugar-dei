@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Circular Motion</title>
+    <style>
+        .container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .animate {
+            animation: circularMotion 1s linear infinite;
+        }
+
+        @keyframes circularMotion {
+            0% { transform: rotate(0deg) translateX(25px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(25px) rotate(-360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://via.placeholder.com/50" class="image">
+    </div>
+
+</body>
+</html>

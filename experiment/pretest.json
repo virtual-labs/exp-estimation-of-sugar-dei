@@ -2,38 +2,104 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. Which of the following is a reducing sugar?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Glucose",
+        "b": "Sucrose",
+        "c": "Starch",
+        "d": "Cellulose"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "a"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "2. Reducing sugars are characterized by the presence of which functional group?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Carboxyl (-COOH)",
+        "b": "Ketone (-C=O) or Aldehyde (-CHO)",
+        "c": "Hydroxyl (-OH)",
+        "d": "Amine (-NH₂)"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "b"
+    },
+    {
+      "question": "3. Which of the following is NOT a non-reducing sugar?",
+      "answers": {
+        "a": "Sucrose",
+        "b": "Lactose",
+        "c": "Trehalose",
+        "d": "Raffinose"
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
+      "correctAnswer": "b"
+    },
+    {
+      "question": "4. In the DNS method, what is the role of 3,5-dinitrosalicylic acid?",
+      "answers": {
+        "a": "It hydrolyzes non-reducing sugars.",
+        "b": "It forms a colored complex with reducing sugars.",
+        "c": "It stabilizes the reaction under acidic conditions.",
+        "d": "It precipitates the sugar from the solution."
+      },
+      "correctAnswer": "b"
+    },
+    {
+      "question": "5. At what wavelength is the absorbance measured in the DNS method?",
+      "answers": {
+        "a": "340 nm",
+        "b": "540 nm",
+        "c": "620 nm",
+        "d": "450 nm"
+      },
+      "correctAnswer": "b"
+    },
+    {
+      "question": "6. In Benedict’s test, the formation of a red precipitate indicates the presence of:",
+      "answers": {
+        "a": "Starch",
+        "b": "Non-reducing sugars",
+        "c": "Reducing sugars",
+        "d": "Amino acids"
+      },
+      "correctAnswer": "c"
+    },
+    {
+      "question": "7. What is the chemical nature of the precipitate formed in Benedict’s test?",
+      "answers": {
+        "a": "Copper(I) oxide (Cu₂O)",
+        "b": "Copper(II) sulfate (CuSO₄)",
+        "c": "Iron(III) hydroxide (Fe(OH)₃)",
+        "d": "Calcium carbonate (CaCO₃)"
+      },
+      "correctAnswer": "a"
+    },
+    {
+      "question": "8. The formation of a brick-red precipitate in Fehling’s test confirms the presence of:",
+      "answers": {
+        "a": "Non-reducing sugars",
+        "b": "Lipids",
+        "c": "Reducing sugars",
+        "d": "Proteins"
+      },
+      "correctAnswer": "c"
+    },
+    {
+      "question": "9. Which treatment is necessary to detect non-reducing sugars in a sample?",
+      "answers": {
+        "a": "Boiling with Benedict’s reagent",
+        "b": "Heating with dilute acid (e.g., HCl) followed by neutralization",
+        "c": "Mixing with DNS reagent directly",
+        "d": "No additional treatment is required"
+      },
+      "correctAnswer": "b"
+    },
+    {
+      "question": "10.  Which method is most commonly used for quantitative estimation of reducing sugars?",
+      "answers": {
+        "a": "Benedict’s test",
+        "b": "DNS method",
+        "c": "Fehling’s test",
+        "d": "Iodine test"
+      },
+      "correctAnswer": "b"
     }
   ]
 }

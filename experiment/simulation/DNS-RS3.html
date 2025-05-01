@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+
+	    @keyframes shakeTestTube {
+            0% { transform: rotate(0deg) translateX(0); }
+            20% { transform: rotate(-7deg) translateX(3px); }
+            40% { transform: rotate(7deg) translateX(-3px); }
+            60% { transform: rotate(-7deg) translateX(3px); }
+            80% { transform: rotate(7deg) translateX(-3px); }
+            100% { transform: rotate(0deg) translateX(0); }
+        }
+
+        .shake {
+            animation: shakeTestTube 0.5s ease-in-out 5;
+        }
+
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+    <div id="main"> 
+      <div id="myhead"><p id="masteps">In this step of the experiment, we measure the absorbance of the sample solutions at 540 nm. To do this, click on the micropipette. </p> <a id="nextstep" class="btn btn-success dsphdd" href="calculator.html"> Next Step</a>
+      </div>
+      <hr> 
+
+	  
+	 <button id="runx" onclick="run();" class="btn btn-success dsphdd" style="padding: 10px 20px;position: absolute;">Run</button>
+
+
+
+
+	 <span id="result"  style="position: absolute;margin-top: 310px;margin-left: 215px;font-size: 21px;font-family: digital-7;z-index: 1;font-size: 18px;" ></span>
+	 <span id="mode" class="dsphdd" style="position: absolute;margin-top: 308px;margin-left: 299px;font-size: 21px;z-index: 1;font-size:10px;"><i>A:540</i></span>
+
+
+	  <img src="imgs4/smtr1.png" id="smtr1" class="dsphd" style="position: absolute;height: auto;margin-top: 275px;margin-left:0px;height:225px;">
+	  <img src="imgs4/smtr2.png" id="smtr2" class="dsphdd" style="position: absolute;height: auto;margin-top: 275px;margin-left:0px;height:225px;">
+	  <img src="imgs4/smtr3.png" id="smtr3" class="dsphdd" style="position: absolute;height: auto;margin-top: 275px;margin-left:0px;height:225px;">
+	  <button onclick="step4();" id="step4" style="position: absolute;height: auto;margin-top: 350px;margin-left:10px;height:125px;width: 135px;background: transparent;border: none;"></button>
+
+	  <button onclick="step6();" id="step6" style="position: absolute;height: auto;margin-top: 410px;margin-left:200px;height:25px;width: 65px;background: transparent;border: none;"></button>
+	  <button onclick="step6x();" id="step6x" style="position: absolute;height: auto;margin-top: 410px;margin-left:270px;height:25px;width: 65px;background: transparent;border: none;"></button>
+	  <button onclick="step5();" id="step5" style="position: absolute;height: auto;margin-top: 383px;margin-left:200px;height:25px;width: 65px;background: transparent;border: none;"></button>
+	  <button onclick="step7();" id="step7" style="position: absolute;height: auto;margin-top: 437px;margin-left:200px;height:25px;width: 130px;background: transparent;border: none;"></button>
+
+
+	  <img src="imgs4/fc07.png" id="fc07" class="dsphd" style="position: absolute;height: auto;margin-top: 275px;margin-left:400px;height:225px;">
+	  <button onclick="step3();" id="step3" style="position: absolute;height: auto;margin-top: 275px;margin-left:400px;height:225px;width: 90px;background: transparent;border: none;"></button>
+
+	  <img src="imgs4/cublk.png" id="cublk" class="dsphd" style="position: absolute;height: auto;margin-top: 375px;margin-left:775px;height:125px;">
+	  <img src="imgs4/cub1.png" id="cub1" class="dsphdd" style="position: absolute;height: auto;margin-top: 375px;margin-left:775px;height:125px;">
+	  <img src="imgs4/cub2.png" id="cub2" class="dsphdd" style="position: absolute;height: auto;margin-top: 375px;margin-left:775px;height:125px;">
+	  <img src="imgs4/cub3.png" id="cub3" class="dsphdd" style="position: absolute;height: auto;margin-top: 375px;margin-left:775px;height:125px;">
+	  <img src="imgs4/cub4.png" id="cub4" class="dsphdd" style="position: absolute;height: auto;margin-top: 375px;margin-left:775px;height:125px;">
+	  <img src="imgs4/cub5.png" id="cub5" class="dsphdd" style="position: absolute;height: auto;margin-top: 375px;margin-left:775px;height:125px;">
+	  <img src="imgs4/cub6.png" id="cub6" class="dsphdd" style="position: absolute;height: auto;margin-top: 375px;margin-left:775px;height:125px;">
+
+	  
+	  <img src="imgs4/mpptstd.png" id="mpptstd" class="dsphd" style="position: absolute;height: auto;margin-top: 130px;margin-left:850px;height:370px;">
+	  <img src="imgs4/mpptstd2.png" id="mpptstd2" class="dsphdd" style="position: absolute;height: auto;margin-top: 130px;margin-left:850px;height:370px;">
+	  <button onclick="step1();" id="step1" style="position: absolute;height: auto;margin-top: 130px;margin-left:850px;height:370px;width: 200px;background: transparent;border: none;"></button>
+	  
+	  <img src="imgs4/mppt1.png" id="mppt1" class="dsphdd" style="position: absolute;height: auto;margin-top: 0px;margin-left:850px;height:315px;">
+	  <button onclick="step2();" id="step2" style="position: absolute;height: auto;margin-top: 20px;margin-left:860px;height:75px;width: 75px;background: transparent;border: none;"></button>
+	
+
+	  <img src="imgs4/mpptu.png" id="mpptu1" class="dsphdd" style="position: absolute;height: auto;margin-top: 45px;margin-left:412px;height:325px;">
+	  <img src="imgs4/mpptd.png" id="mpptd1" class="dsphdd" style="position: absolute;height: auto;margin-top: 45px;margin-left:412px;height:325px;">
+
+	  <img src="imgs4/mpptu.png" id="mpptu2" class="dsphdd" style="position: absolute;height: auto;margin-top: 45px;margin-left:460px;height:325px;">
+	  <img src="imgs4/mpptd.png" id="mpptd2" class="dsphdd" style="position: absolute;height: auto;margin-top: 45px;margin-left:460px;height:325px;">
+
+	  <img src="imgs4/mpptu.png" id="mpptu3" class="dsphdd" style="position: absolute;height: auto;margin-top: 45px;margin-left:510px;height:325px;">
+	  <img src="imgs4/mpptd.png" id="mpptd3" class="dsphdd" style="position: absolute;height: auto;margin-top: 45px;margin-left:510px;height:325px;">
+
+	  <img src="imgs4/mpptu.png" id="mpptu4" class="dsphdd" style="position: absolute;height: auto;margin-top: 45px;margin-left:557px;height:325px;">
+	  <img src="imgs4/mpptd.png" id="mpptd4" class="dsphdd" style="position: absolute;height: auto;margin-top: 45px;margin-left:557px;height:325px;">
+
+	  <img src="imgs4/mpptu.png" id="mpptu5" class="dsphdd" style="position: absolute;height: auto;margin-top: 45px;margin-left:605px;height:325px;">
+	  <img src="imgs4/mpptd.png" id="mpptd5" class="dsphdd" style="position: absolute;height: auto;margin-top: 45px;margin-left:605px;height:325px;">
+
+	  <img src="imgs4/mpptu.png" id="mpptu6" class="dsphdd" style="position: absolute;height: auto;margin-top: 45px;margin-left:655px;height:325px;">
+	  <img src="imgs4/mpptd.png" id="mpptd6" class="dsphdd" style="position: absolute;height: auto;margin-top: 45px;margin-left:655px;height:325px;">
+
+	  <img src="imgs4/mpptu.png" id="mpptu7" class="dsphdd" style="position: absolute;height: auto;margin-top: 149px;margin-left:750px;height:325px;">
+	  <img src="imgs4/mpptd.png" id="mpptd7" class="dsphdd" style="position: absolute;height: auto;margin-top: 149px;margin-left:750px;height:325px;">
+
+
+	  <span id="red1" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 432px;margin-top: 137px;transform: rotate(270deg);width: 55px;font-family: digital-7;font-size: 17px;"></span>
+	  <span id="red2" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 481px;margin-top: 137px;transform: rotate(270deg);width: 55px;font-family: digital-7;font-size: 17px;"></span>
+	  <span id="red3" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 530px;margin-top: 137px;transform: rotate(270deg);width: 55px;font-family: digital-7;font-size: 17px;"></span>
+	  <span id="red4" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 579px;margin-top: 137px;transform: rotate(270deg);width: 55px;font-family: digital-7;font-size: 17px;"></span>
+	  <span id="red5" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 627px;margin-top: 137px;transform: rotate(270deg);width: 55px;font-family: digital-7;font-size: 17px;"></span>
+	  <span id="red6" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 675px;margin-top: 137px;transform: rotate(270deg);width: 55px;font-family: digital-7;font-size: 17px;"></span>
+	  <span id="red7" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 770px;margin-top: 242px;transform: rotate(270deg);width: 55px;font-family: digital-7;font-size: 17px;"></span>
+
+	  <span id="red0" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 870px;margin-top: 95px;transform: rotate(270deg);width: 55px;font-family: digital-7;font-size: 17px;"></span>
+
+
+
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 100px;margin-top: 510px;">Spectroscopy Meter</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 450px;margin-top: 510px;">Blank | Sol.1 | Sol.2 | Sol.3 | Sol.4 | Sol.5</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 770px;margin-top: 510px;">Cuvette</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 925px;margin-top: 510px;">Pipette</span>
+	  
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+function step1()
+{
+	$("#mpptstd").addClass("dsphdd");
+	$("#mpptstd2").removeClass("dsphdd");
+	$("#mppt1").removeClass("dsphdd");
+	step=1;
+	$("#masteps").text("Now, click on the micropipette wheel to set the volume to 1 mL.");
+	
+}
+
+function step2()
+{
+	if (step==1) 
+	{
+		$(".red").text("1000.00");
+		$("#red0").removeClass("dsphdd");
+		$("#masteps").text("Now, click on the blank tube to add 1 mL of the solution into the cuvette.");
+	step=2;
+	}
+}
+
+function step3()
+{
+	if (step==2) 
+	{
+		$("#mppt1").addClass("dsphdd");
+		$("#red0").addClass("dsphdd");
+		$("#mpptd1").removeClass("dsphdd");
+		$("#red1").removeClass("dsphdd");
+		setTimeout(function() {
+		  $("#mpptd1").addClass("dsphdd");
+		  $("#mpptu1").removeClass("dsphdd");
+		}, 800);
+		setTimeout(function() {
+		  $("#mpptu1").addClass("dsphdd");
+		  $("#red1").addClass("dsphdd");
+		  $("#red7").removeClass("dsphdd");
+		  $("#mpptu7").removeClass("dsphdd");
+		}, 1200);
+		setTimeout(function() {
+		  $("#mpptu7").addClass("dsphdd");
+		  $("#mpptd7").removeClass("dsphdd");
+		  $("#cublk").addClass("dsphdd");
+		  $("#cub1").removeClass("dsphdd");
+		}, 2000);
+		setTimeout(function() {
+		  $("#mpptd7").addClass("dsphdd");
+		  $("#red7").addClass("dsphdd");
+		  $("#mpptstd2").addClass("dsphdd");
+		  $("#mpptstd").removeClass("dsphdd");
+		  $('#masteps').text("Now, to take the absorbance reading, click on the spectrometer lid to open it and place the test sample inside.");
+		}, 2500);
+
+
+		
+	step=3;
+	}
+}
+
+
+function step4()
+{
+	if (step==3) 
+	{
+		$("#smtr1").addClass("dsphdd");
+		$("#smtr2").removeClass("dsphdd");
+		setTimeout(function() {
+		  $("#cub1").addClass("dsphdd");
+		  $("#smtr2").addClass("dsphdd");
+		  $("#smtr3").removeClass("dsphdd");
+		}, 800);
+		setTimeout(function() {
+		  $("#smtr3").addClass("dsphdd");
+		  $("#smtr1").removeClass("dsphdd");
+		  $('#masteps').text("Now, click on the A540 button on the spectrometer to set the absorbance reading to 540 nm.");
+		}, 1600);
+	}
+	step=4;
+}
+
+function step5()
+{
+	if (step==4) 
+	{
+		$("#mode").removeClass("dsphdd");
+		$('#masteps').text("Now, click on the Blank button on the spectrometer to set it to blank mode.");
+	}
+	step=5;
+}
+
+function step6()
+{
+	if (step==5) 
+	{
+		$("#result").text("B: ");
+		$('#masteps').text("Now, click on Enter to measure the absorbance reading of the blank sample.");
+	}
+	step=6;
+}
+
+
+function step7()
+{
+	if (step==6) 
+	{
+		$("#result").text("B: 00.00");
+		setTimeout(function() {
+		  $("#cublk").removeClass("dsphdd");
+		  $("#runx").removeClass("dsphdd");
+		  $('#masteps').text("Now, click on the Run button to measure the absorbance readings of the remaining samples in the same way.");
+		}, 2500);
+	}
+	step=7;
+}
+
+
+
+let TestData = [
+				[1000.00,0.22],
+				[1000.00,0.40],
+				[1000.00,0.61],
+				[1000.00,0.82],
+				[1000.00,1.2],
+				];
+
+function run() {
+	$("#runx").addClass("dsphdd");
+    for (let i = 0; i < TestData.length; i++) 
+    {
+    	if (i==0) 
+    	{
+    		$("#mpptstd").addClass("dsphdd");
+			$("#mpptstd2").removeClass("dsphdd");
+    	}
+    	$("#mppt1").removeClass("dsphdd");
+        (function(i) {
+            setTimeout(function() {
+
+                setTimeout(() => {
+                $(".red").text(TestData[i][0]);
+				$("#red0").removeClass("dsphdd");
+                }, 800);
+
+                setTimeout(() => {
+                $("#mppt1").addClass("dsphdd");
+				$("#red0").addClass("dsphdd");
+				$("#mpptd"+(i+2)).removeClass("dsphdd");
+				$("#red"+(i+2)).removeClass("dsphdd");
+                }, 1600);
+
+				setTimeout(function() {
+				  $("#mpptd"+(i+2)).addClass("dsphdd");
+				  $("#mpptu"+(i+2)).removeClass("dsphdd");
+				}, 2400);
+				setTimeout(function() {
+				  $("#mpptu"+(i+2)).addClass("dsphdd");
+				  $("#red"+(i+2)).addClass("dsphdd");
+				  $("#red7").removeClass("dsphdd");
+				  $("#mpptu7").removeClass("dsphdd");
+				}, 3200);
+				setTimeout(function() {
+				  $("#mpptu7").addClass("dsphdd");
+				  $("#mpptd7").removeClass("dsphdd");
+				  $("#cublk").addClass("dsphdd");
+				  $("#cub"+(i+2)).removeClass("dsphdd");
+				}, 4000);
+				setTimeout(function() {
+				  $("#mpptd7").addClass("dsphdd");
+				  $("#red7").addClass("dsphdd");
+				  $("#mppt1").removeClass("dsphdd");
+				}, 4800);
+
+				setTimeout(function() {
+                $("#smtr1").addClass("dsphdd");
+				$("#smtr2").removeClass("dsphdd");
+				}, 5600);
+       
+				setTimeout(function() {
+				  $("#cub"+(i+2)).addClass("dsphdd");
+				  $("#smtr2").addClass("dsphdd");
+				  $("#smtr3").removeClass("dsphdd");
+				}, 6400);
+				setTimeout(function() {
+				  $("#smtr3").addClass("dsphdd");
+				  $("#smtr1").removeClass("dsphdd");
+				}, 7200);
+				setTimeout(function() {
+				  $("#result").text("T: "+ TestData[i][1]);
+				}, 8000);
+				setTimeout(function() {
+				  $("#result").text("00.00");
+				  $("#cublk").removeClass("dsphdd");
+				}, 10000);
+                
+                
+
+            }, i * 10300); // Delay in milliseconds (27,200 ms)
+        })(i);
+
+
+        setTimeout(() => {
+                    $("#masteps").text("To proceed further, click on the next step.");
+					$("#nextstep").removeClass("dsphdd");
+                }, 51500);
+
+    }
+}
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

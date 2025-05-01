@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    
+    <!-- jQuery and Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- Chart.js (Using local file or CDN) -->
+    <script src="js/chart.js"></script>
+    <style type="text/css">
+        .zero {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="row zero">
+    <div id="main"> 
+        <div id="myhead">
+            <p id="masteps">
+                This calculator uses a standard curve plot (forced through origin) to calculate 
+                the concentration of unknown samples. 
+                Check sample data table (<a href="table.html" target="_blank">Open Table</a>)
+            </p>
+            <a id="nextstep" class="btn btn-success dsphdd" href="step2.html">Next Step</a>
+        </div>
+        <hr>
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 zero" style="border-right: 1px solid #aaa;padding-right: 15px">
+            <div class="form-group">
+                <h5 style="text-align: left;">Enter absorbance (540 nm) and known Concentrations of reducing sugar. (µg/ml)</h5>
+                <div id="inputContainer">
+                    <div class="row mb-2 zero">
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="Concentrations of reducing sugar.(µg/ml)" required>
+                        </div>
+                        <div class="col">
+                            <input type="number" step="0.001" class="form-control" placeholder="Absorbance at 540 nm" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 10px;">
+                <button id="addButton" class="btn btn-primary">+ Add</button>
+                <hr>
+            </div>
+            <div class="form-group" style="margin-top: 50px;">
+                <h5 style="text-align: left;">Enter unknown sample's absorbance reading at 540 nm</h5>
+                <input type="number" step="0.001" class="form-control" placeholder="Unknown sample" style="width: 100%;">
+            </div>
+            <div class="form-group mt-2">
+                <hr>
+                <button id="calculateButton" class="btn btn-success">Calculate</button>
+            </div>
+        </div>
+        
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 zero" style="min-width: 500px;">
+            <canvas id="bsaChart" width="400" height="200" style="margin-left: 55px;"></canvas>
+            <div style="padding-left:55px;" id="resid" class="col-lg-12 dsphdd">
+                <h4>
+                    <i>
+                        The estimated concentration of the unknown sample is: 
+                        <span id="conid"></span> µg/ml
+                    </i>
+                </h4>
+                <h5>Using eq (forced zero intercept): X = Y / m</h5>
+                <h5>Where<br>
+                    Y = <span id="unkwnpid"></span> : Unknown sample absorbance,<br>
+                    m = <span id="slpid"></span> : Slope (b=0)
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function () {
+    let concentrations = [];
+    let absorbances = [];
+
+    // Add data row
+    $('#addButton').click(function () {
+        let conc = parseFloat($('#inputContainer input[placeholder*="Concentration"]:last').val());
+        let abs = parseFloat($('#inputContainer input[placeholder*="Absorbance"]:last').val());
+
+        if (!isNaN(conc) && !isNaN(abs)) {
+            concentrations.push(conc);
+            absorbances.push(abs);
+            $('#inputContainer').append(`
+                <div class="row mb-2 zero">
+                    <div class="col">
+                        <input type="number" class="form-control" placeholder="Concentrations of reducing sugar.(µg/ml)" value="" required>
+                    </div>
+                    <div class="col">
+                        <input type="number" step="0.001" class="form-control" placeholder="Absorbance at 540 nm" value="" required>
+                    </div>
+                </div>
+            `);
+        }
+    });
+
+    $('#calculateButton').click(function () {
+        if (concentrations.length < 1) {
+            alert('Please add at least one data point.');
+            return;
+        }
+
+        // ============ FORCED ZERO INTERCEPT REGRESSION ==============
+        // slope m = sum(x_i*y_i) / sum(x_i^2)
+        // intercept b = 0
+        let sumXY = 0;
+        let sumX2 = 0;
+        for (let i = 0; i < concentrations.length; i++) {
+            sumXY += concentrations[i] * absorbances[i];
+            sumX2 += concentrations[i] * concentrations[i];
+        }
+
+        // Avoid divide-by-zero if sumX2=0
+        if (sumX2 === 0) {
+            alert('Invalid data: cannot compute forced-zero slope.');
+            return;
+        }
+        const m = sumXY / sumX2;  // forced slope
+        const b = 0;             // forced to zero
+
+        // Unknown sample
+        const unknownAbs = parseFloat($("input[placeholder='Unknown sample']").val());
+        // Concentration = Y / m, since b=0
+        const estimatedConc = parseFloat((unknownAbs / m).toFixed(2));
+
+        // Show results
+        $('#conid').text(estimatedConc);
+        $('#unkwnpid').text(unknownAbs);
+        $('#slpid').text(m.toFixed(3));
+        $('#resid').removeClass('dsphdd');
+
+        // Prepare Chart
+        const ctx = document.getElementById('bsaChart').getContext('2d');
+
+        // 1) Standard Points (blue dots)
+        const standardPoints = {
+            label: 'Standard Points',
+            data: concentrations.map((x, i) => ({ x: x, y: absorbances[i] })),
+            backgroundColor: 'white',
+            borderColor: 'blue',
+            pointBorderWidth: 2,
+            pointRadius: 5,
+            type: 'scatter',
+            showLine: false
+        };
+
+        // 2) Forced line from (0,0) to maxX
+        const maxX = Math.max(...concentrations) * 1.1;  // 10% margin
+        // We'll plot two points: (0,0) and (maxX, m*maxX)
+        const forcedLine = {
+            label: 'Forced Curve',
+            data: [
+                { x: 0, y: 0 },
+                { x: maxX, y: m * maxX }
+            ],
+            borderColor: 'blue',
+            fill: false,
+            tension: 0.1,
+            type: 'line',
+            pointRadius: 0
+        };
+
+        // 3) Unknown Sample (red dot)
+        const unknownPoint = {
+            label: 'Unknown Sample',
+            data: [{ x: estimatedConc, y: unknownAbs }],
+            backgroundColor: 'red',
+            borderColor: 'red',
+            pointStyle: 'circle',
+            radius: 6,
+            type: 'scatter',
+            showLine: false
+        };
+
+        // 4) Red dashed lines to the unknown sample
+        const horizontalLine = {
+            label: 'Horizontal Guide',
+            data: [
+                { x: 0, y: unknownAbs },
+                { x: estimatedConc, y: unknownAbs }
+            ],
+            borderColor: 'red',
+            borderDash: [5, 5],
+            fill: false,
+            type: 'line',
+            pointRadius: 0,
+            showLine: true
+        };
+        const verticalLine = {
+            label: 'Vertical Guide',
+            data: [
+                { x: estimatedConc, y: 0 },
+                { x: estimatedConc, y: unknownAbs }
+            ],
+            borderColor: 'red',
+            borderDash: [5, 5],
+            fill: false,
+            type: 'line',
+            pointRadius: 0,
+            showLine: true
+        };
+
+        // Calculate maxY for axis
+        const maxY = Math.max(...absorbances, unknownAbs, m * maxX) * 1.1;
+
+        // Destroy old chart if exists
+        if (window.bsaChartInstance) {
+            window.bsaChartInstance.destroy();
+        }
+
+        // Create new Chart
+        window.bsaChartInstance = new Chart(ctx, {
+            type: 'line',
+            data: {
+                datasets: [standardPoints, forcedLine, unknownPoint, horizontalLine, verticalLine]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        type: 'linear',
+                        min: 0,
+                        max: maxX,
+                        position: 'bottom',
+                        title: {
+                            display: true,
+                            text: 'Concentration (µg/ml)'
+                        }
+                    },
+                    y: {
+                        min: 0,
+                        max: maxY,
+                        title: {
+                            display: true,
+                            text: 'Absorbance at 540 nm'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            // Show the main sets only
+                            filter: (item) => ['Standard Points', 'Forced Curve', 'Unknown Sample'].includes(item.text)
+                        }
+                    }
+                }
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>

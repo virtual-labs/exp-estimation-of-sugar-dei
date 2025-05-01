@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+		#nextstep{
+			visibility: hidden;
+		}
+		.animate {
+            animation: circularMotion 0.75s linear infinite;
+        }
+
+    @keyframes circularMotion {
+        0% { transform: rotate(0deg) translateX(15px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(15px) rotate(-360deg); }
+    }
+
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+    <div id="main"> 
+      <div id="myhead"><p id="masteps"> To perform this experiment, pour 5 mL of the glucose sample into the test tube. To do this, click on the pipette tube.</p> <a id="nextstep" class="btn btn-success" href="step2.html"> Next Step</a>
+      </div>
+      <hr> 
+
+	  <button style="position: absolute;width: 145px;margin-top: 350px;margin-left:0px;height: 175px;border: none;background: transparent;z-index: 1;"></button>
+	  <img src="imgs1/target.png" id="target" class="dsphd" style="position: absolute;width: auto;margin-top: 350px;margin-left:0px;height: 175px;">
+	  <img src="imgs1/PPTblk.png" id="PPTblk" class="dsphdd" style="position: absolute;width: auto;margin-top: 135px;margin-left:60px;height: 375px;z-index: -1;">
+	  <img src="imgs1/PPT1.png" id="PPT10" class="dsphdd" style="position: absolute;width: auto;margin-top: 135px;margin-left:60px;height: 375px;z-index: -1;">
+	  <img src="imgs1/push.png" id="push1" class="dsphdd" style="position: absolute;width: auto;margin-top: 150px;margin-left:75px;height: 25px;z-index: 1;">
+
+	  <button onclick="step2();" id="step2" style="position: absolute;width: 110px;margin-top: 300px;margin-left:165px;height: 225px;border: none;background: transparent;z-index: 1;"></button>
+	  <img src="imgs1/BTL1C.png" id="BTL1C" class="dsphd" style="position: absolute;width: auto;margin-top: 300px;margin-left:165px;height: 225px;">
+	  <img src="imgs1/BTL1O.png" id="BTL1O" class="dsphdd" style="position: absolute;width: auto;margin-top: 300px;margin-left:165px;height: 225px;">
+	  <img src="imgs1/PPThlf.png" id="PPThlf" class="dsphdd" style="position: absolute;width: auto;margin-top: 142px;margin-left:197px;height: 375px;">
+	  <img src="imgs1/push.png" id="push2" class="dsphdd" style="position: absolute;width: auto;margin-top: 157px;margin-left:212px;height: 25px;z-index: 1;">
+
+	  <button onclick="step3();" id="step3" style="position: absolute;width: 125px;margin-top: 250px;margin-left:500px;height: 275px;border: none;background: transparent;z-index: 1;"></button>
+	  <img src="imgs1/TBblk.png" id="TBblk" class="dsphd" style="position: absolute;width: auto;margin-top: 250px;margin-left:500px;height: 275px;">
+	  <img src="imgs1/PPT1.png" id="PPT11" class="dsphdd" style="position: absolute;width: auto;margin-top: 75px;margin-left:545px;height: 375px;z-index: -1;">
+	  <img src="imgs1/drop.png" id="drop" class="dsphdd" style="position: absolute;width: auto;margin-top: 450px;margin-left:562px;height: 55px;z-index: 2;">
+	  <img src="imgs1/push.png" id="push4" class="dsphdd" style="position: absolute;width: auto;margin-top: 92px;margin-left:560px;height: 25px;z-index: 1;">
+
+	  <img src="imgs1/TB1.png" id="TB1" class="dsphdd" style="position: absolute;width: auto;margin-top: 250px;margin-left:500px;height: 275px;">
+	  <img src="imgs1/PPT2.png" id="PPT2" class="dsphdd" style="position: absolute;width: auto;margin-top: 75px;margin-left:545px;height: 375px;z-index: -1;">
+
+	  <button onclick="step4();" id="step4" style="position: absolute;width: 110px;margin-top: 300px;margin-left:300px;height: 225px;border: none;background: transparent;z-index: 1;"></button>
+	  <img src="imgs1/BTL2C.png" id="BTL2C" class="dsphd" style="position: absolute;width: auto;margin-top: 300px;margin-left:300px;height: 225px;">
+	  <img src="imgs1/BTL2O.png" id="BTL2O" class="dsphdd" style="position: absolute;width: auto;margin-top: 300px;margin-left:300px;height: 225px;">
+	  <img src="imgs1/PPThlf.png" id="PPThlfX" class="dsphdd" style="position: absolute;width: auto;margin-top: 142px;margin-left:332px;height: 375px;">
+	  <img src="imgs1/push.png" id="push3" class="dsphdd" style="position: absolute;width: auto;margin-top: 157px;margin-left:345px;height: 25px;z-index: 1;">
+
+
+	  <img src="imgs1/TB21.png" id="TB21" class="dsphdd" style="position: absolute;width: auto;margin-top: 50px;margin-left:550px;height: 400px;transform: rotate(350deg);">
+	  <img src="imgs1/TB22.png" id="TB22" class="dsphdd" style="position: absolute;width: auto;margin-top: 50px;margin-left:550px;height: 400px;transform: rotate(350deg);">
+	  <img src="imgs1/PPT3.png" id="PPT3" class="dsphdd" style="position: absolute;width: auto;margin-top: -5px;margin-left:425px;height: 375px;z-index: -1;transform: rotate(315deg);">
+	  <img src="imgs1/PPTblk.png" id="PPTblkX" class="dsphdd" style="position: absolute;width: auto;margin-top: -5px;margin-left:425px;height: 375px;z-index: -1;transform: rotate(315deg);">
+	  <img src="imgs1/push.png" id="push5" class="dsphdd" style="position: absolute;width: auto;margin-top: 52px;margin-left:325px;height: 25px;z-index: 1;">
+	  <img src="imgs1/TB31.png" id="TB31" class="dsphdd" style="position: absolute;width: auto;margin-top: 250px;margin-left:500px;height: 275px;">
+	  <img src="imgs1/TB32.png" id="TB32" class="dsphdd" style="position: absolute;width: auto;margin-top: 250px;margin-left:500px;height: 275px;">
+
+
+	  <button onclick="step1();" id="step1" style="position: absolute;width: 375px;margin-top: 490px;margin-left:635px;height: 45px;border: none;background: transparent;z-index: 1;"></button>
+	  <img src="imgs1/PPTblk.png" id="PPTblkN" class="dsphd" style="position: absolute;width: auto;margin-top: 325px;margin-left:800px;height: 375px; transform: rotate(90deg);">
+
+	  
+	  
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 20px;margin-top: 535px;">Glucose Sample</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 165px;margin-top: 535px;">Alpha Naphthol</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 310px;margin-top: 535px;">H2SO4 Acid</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 530px;margin-top: 535px;">Test Tube</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 750px;margin-top: 535px;">Pipette</span>
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+function step1()
+{
+	$("#PPTblkN").addClass("dsphdd");
+	$("#step1").addClass("dsphdd");
+	$("#PPTblk").removeClass("dsphdd");
+	setTimeout(function() {
+	  $("#push1").removeClass("dsphdd");
+	}, 200);
+	setTimeout(function() {
+	  $("#PPTblk").addClass("dsphdd");
+	  $("#PPT10").removeClass("dsphdd");
+	}, 1000);
+	setTimeout(function() {
+	  $("#push1").addClass("dsphdd");
+	}, 1200);
+
+	setTimeout(function() {
+	  $("#PPT10").addClass("dsphdd");
+	}, 1500);
+	setTimeout(function() {
+	  $("#PPT11").removeClass("dsphdd");
+	}, 1800);
+	setTimeout(function() {
+	  $("#push4").removeClass("dsphdd");
+	  $("#drop").removeClass("dsphdd");
+	}, 2600);
+	setTimeout(function() {
+	  $("#TBblk").removeClass("dsphdd");
+	  $("#drop").removeClass("dsphdd");
+	}, 2800);
+	setTimeout(function() {
+	  $("#TBblk").addClass("dsphdd");
+	  $("#TB1").removeClass("dsphdd");
+	  $("#drop").addClass("dsphdd");
+	  $("#PPT11").addClass("dsphdd");
+	  $("#push4").addClass("dsphdd");
+	}, 3500);
+	setTimeout(function() {
+	  $("#PPTblkN").removeClass("dsphdd");
+	  $("#masteps").text("Next, add 2-3 drops of Alpha-Naphthol to the sample. To do this, click on the Alpha-Naphthol bottle.");
+	}, 3700);
+
+	step=1;
+}
+
+function step2()
+{
+	if (step==1) 
+	{
+	 $("#PPTblkN").addClass("dsphdd");
+	setTimeout(function() {
+	  $("#BTL1C").addClass("dsphdd");
+	  $("#BTL1O").removeClass("dsphdd");
+	}, 200);
+	// setTimeout(function() {
+	//   $("#PPT10").addClass("dsphdd");
+	// }, 400);
+	setTimeout(function() {
+	  $("#PPThlf").removeClass("dsphdd");
+	  $("#push2").removeClass("dsphdd");
+	}, 600);
+	setTimeout(function() {
+	  $("#push2").addClass("dsphdd");
+	}, 1500);
+
+
+	setTimeout(function() {
+	  $("#PPThlf").addClass("dsphdd");
+	  $("#PPT10").addClass("dsphdd");
+	}, 2000);
+	setTimeout(function() {
+	  $("#PPT11").removeClass("dsphdd");
+	}, 2300);
+	setTimeout(function() {
+	  $("#push4").removeClass("dsphdd");
+	  $("#drop").removeClass("dsphdd");
+	}, 3100);
+	setTimeout(function() {
+	  $("#drop").addClass("dsphdd");
+	  $("#PPT11").addClass("dsphdd");
+	  $("#push4").addClass("dsphdd");
+	}, 3600);
+	setTimeout(function() {
+	  $("#PPTblkN").removeClass("dsphdd");
+	  $("#masteps").text("Now, click on the test tube to mix the solution thoroughly.");
+	}, 4200);
+
+	step=2;
+	}
+}
+
+
+function step3()
+{
+	if (step==2) 
+	{
+		$("#TB1").addClass("animate");
+		setTimeout(function() {
+		  $("#TB1").removeClass("animate");
+		}, 1500);
+
+		$("#masteps").text("Now, click on the sulfuric acid bottle to carefully add 2 mL of it to the solution in the test tube.");
+		step=3;
+	}
+}
+
+
+
+function step4()
+{
+	if (step==3) 
+	{
+	 
+	 $("#BTL2C").addClass("dsphdd");
+	 $("#BTL2O").removeClass("dsphdd");
+	setTimeout(function() {
+	  $("#TB1").addClass("dsphdd");
+	  $("#TB21").removeClass("dsphdd");
+	}, 500);
+	setTimeout(function() {
+	  $("#PPTblkN").addClass("dsphdd");
+	}, 1200);
+	  setTimeout(function() {
+	  $("#PPThlfX").removeClass("dsphdd");
+	  $("#push3").removeClass("dsphdd");
+	}, 1600);
+
+	setTimeout(function() {
+	  $("#push3").addClass("dsphdd");
+	  $("#PPThlfX").addClass("dsphdd");
+	}, 2400);
+
+	setTimeout(function() {
+	  $("#PPT3").removeClass("dsphdd");
+	}, 2500);
+
+	setTimeout(function() {
+	  $("#push5").removeClass("dsphdd");
+	}, 3000);
+	setTimeout(function() {
+	  $("#TB21").addClass("dsphdd");
+	  $("#TB22").removeClass("dsphdd");
+	  $("#PPT3").addClass("dsphdd");
+	  $("#PPTblkX").removeClass("dsphdd");
+	  $("#push5").addClass("dsphdd");
+	}, 3500);
+	setTimeout(function() {
+	  $("#PPTblkX").addClass("dsphdd");
+	}, 4000);
+	setTimeout(function() {
+	  $("#TB22").addClass("dsphdd");
+	  $("#TB31").removeClass("dsphdd");
+	}, 4500);
+
+	setTimeout(function () {
+            $("#TB31").fadeOut(800, function () {
+                $(this).addClass("dsphdd");
+            });
+            $("#TB32").removeClass("dsphdd").hide().fadeIn(800);
+            $("#masteps").text("Now, check if a purple-colored ring has formed at the junction of the two layers. The appearance of this ring indicates the presence of carbohydrates in the solution.");
+    }, 5300);
+
+	step=4;
+	}
+}
+
+
+
+// function step4()
+// {
+// 	if (step==3) 
+// 	{
+// 		$("#subO").removeClass("dsphdd");
+// 		$("#subC").addClass("dsphdd");
+// 		setTimeout(function() {
+//       $("#Pptred").addClass("dsphdd");
+//       $("#ppt").addClass("dsphdd");
+//     }, 800);
+//     setTimeout(function() {
+//       $("#subDW").removeClass("dsphdd");
+//       $("#Subred").removeClass("dsphdd");
+//       $("#Subred").text("05");
+//     }, 1600);
+// }
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

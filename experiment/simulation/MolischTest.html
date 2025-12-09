@@ -32,58 +32,58 @@
 <body>
 
 <div class="row zero">
-    <div id="main"> 
-      <div id="myhead"><p id="masteps"> To perform this experiment, pour 5 mL of the glucose sample into the test tube. To do this, click on the pipette tube.</p> <a id="nextstep" class="btn btn-success" href="step2.html"> Next Step</a>
-      </div>
-      <hr> 
+	<div id="leftPanel">
+		<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+		<p id="masteps">To perform this experiment, pour 5 mL of the glucose sample into the test tube. To do this, click on the pipette tube.</p> <a id="nextstep" class="btn btn-success" href="step2.html"> Next Step</a>
+	</div>
+	<div id="main"> 
+	  <button style="position: absolute;width: 145px;margin-top: 250px;margin-left:0px;height: 175px;border: none;background: transparent;z-index: 1;"></button>
+	  <img src="imgs1/target.png" id="target" class="dsphd" style="position: absolute;width: auto;margin-top:250px;margin-left:0px;height: 175px;">
+	  <img src="imgs1/PPTblk.png" id="PPTblk" class="dsphdd" style="position: absolute;width: auto;margin-top: 35px;margin-left:60px;height: 375px;z-index: -1;">
+	  <img src="imgs1/PPT1.png" id="PPT10" class="dsphdd" style="position: absolute;width: auto;margin-top: 35px;margin-left:60px;height: 375px;z-index: -1;">
+	  <img src="imgs1/push.png" id="push1" class="dsphdd" style="position: absolute;width: auto;margin-top: 47px;margin-left:75px;height: 25px;z-index: 1;">
 
-	  <button style="position: absolute;width: 145px;margin-top: 350px;margin-left:0px;height: 175px;border: none;background: transparent;z-index: 1;"></button>
-	  <img src="imgs1/target.png" id="target" class="dsphd" style="position: absolute;width: auto;margin-top: 350px;margin-left:0px;height: 175px;">
-	  <img src="imgs1/PPTblk.png" id="PPTblk" class="dsphdd" style="position: absolute;width: auto;margin-top: 135px;margin-left:60px;height: 375px;z-index: -1;">
-	  <img src="imgs1/PPT1.png" id="PPT10" class="dsphdd" style="position: absolute;width: auto;margin-top: 135px;margin-left:60px;height: 375px;z-index: -1;">
-	  <img src="imgs1/push.png" id="push1" class="dsphdd" style="position: absolute;width: auto;margin-top: 150px;margin-left:75px;height: 25px;z-index: 1;">
+	  <button onclick="step2();" id="step2" style="position: absolute;width: 110px;margin-top: 210px;margin-left:165px;height: 225px;border: none;background: transparent;z-index: 1;"></button>
+	  <img src="imgs1/BTL1C.png" id="BTL1C" class="dsphd" style="position: absolute;width: auto;margin-top: 210px;margin-left:165px;height: 225px;">
+	  <img src="imgs1/BTL1O.png" id="BTL1O" class="dsphdd" style="position: absolute;width: auto;margin-top: 210px;margin-left:165px;height: 225px;">
+	  <img src="imgs1/PPThlf.png" id="PPThlf" class="dsphdd" style="position: absolute;width: auto;margin-top: 50px;margin-left:197px;height: 375px;">
+	  <img src="imgs1/push.png" id="push2" class="dsphdd" style="position: absolute;width: auto;margin-top: 60px;margin-left:212px;height: 25px;z-index: 1;">
 
-	  <button onclick="step2();" id="step2" style="position: absolute;width: 110px;margin-top: 300px;margin-left:165px;height: 225px;border: none;background: transparent;z-index: 1;"></button>
-	  <img src="imgs1/BTL1C.png" id="BTL1C" class="dsphd" style="position: absolute;width: auto;margin-top: 300px;margin-left:165px;height: 225px;">
-	  <img src="imgs1/BTL1O.png" id="BTL1O" class="dsphdd" style="position: absolute;width: auto;margin-top: 300px;margin-left:165px;height: 225px;">
-	  <img src="imgs1/PPThlf.png" id="PPThlf" class="dsphdd" style="position: absolute;width: auto;margin-top: 142px;margin-left:197px;height: 375px;">
-	  <img src="imgs1/push.png" id="push2" class="dsphdd" style="position: absolute;width: auto;margin-top: 157px;margin-left:212px;height: 25px;z-index: 1;">
+	  <button onclick="step3();" id="step3" style="position: absolute;width: 125px;margin-top: 165px;margin-left:500px;height: 275px;border: none;background: transparent;z-index: 1;"></button>
+	  <img src="imgs1/TBblk.png" id="TBblk" class="dsphd" style="position: absolute;width: auto;margin-top: 165px;margin-left:500px;height: 275px;">
+	  <img src="imgs1/PPT1.png" id="PPT11" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:545px;height: 375px;z-index: -1;">
+	  <img src="imgs1/drop.png" id="drop" class="dsphdd" style="position: absolute;width: auto;margin-top: 375px;margin-left:562px;height: 55px;z-index: 2;">
+	  <img src="imgs1/push.png" id="push4" class="dsphdd" style="position: absolute;width: auto;margin-top: 12px;margin-left:560px;height: 25px;z-index: 1;">
 
-	  <button onclick="step3();" id="step3" style="position: absolute;width: 125px;margin-top: 250px;margin-left:500px;height: 275px;border: none;background: transparent;z-index: 1;"></button>
-	  <img src="imgs1/TBblk.png" id="TBblk" class="dsphd" style="position: absolute;width: auto;margin-top: 250px;margin-left:500px;height: 275px;">
-	  <img src="imgs1/PPT1.png" id="PPT11" class="dsphdd" style="position: absolute;width: auto;margin-top: 75px;margin-left:545px;height: 375px;z-index: -1;">
-	  <img src="imgs1/drop.png" id="drop" class="dsphdd" style="position: absolute;width: auto;margin-top: 450px;margin-left:562px;height: 55px;z-index: 2;">
-	  <img src="imgs1/push.png" id="push4" class="dsphdd" style="position: absolute;width: auto;margin-top: 92px;margin-left:560px;height: 25px;z-index: 1;">
+	  <img src="imgs1/TB1.png" id="TB1" class="dsphdd" style="position: absolute;width: auto;margin-top: 165px;margin-left:500px;height: 275px;">
+	  <img src="imgs1/PPT2.png" id="PPT2" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:545px;height: 375px;z-index: -1;">
 
-	  <img src="imgs1/TB1.png" id="TB1" class="dsphdd" style="position: absolute;width: auto;margin-top: 250px;margin-left:500px;height: 275px;">
-	  <img src="imgs1/PPT2.png" id="PPT2" class="dsphdd" style="position: absolute;width: auto;margin-top: 75px;margin-left:545px;height: 375px;z-index: -1;">
-
-	  <button onclick="step4();" id="step4" style="position: absolute;width: 110px;margin-top: 300px;margin-left:300px;height: 225px;border: none;background: transparent;z-index: 1;"></button>
-	  <img src="imgs1/BTL2C.png" id="BTL2C" class="dsphd" style="position: absolute;width: auto;margin-top: 300px;margin-left:300px;height: 225px;">
-	  <img src="imgs1/BTL2O.png" id="BTL2O" class="dsphdd" style="position: absolute;width: auto;margin-top: 300px;margin-left:300px;height: 225px;">
-	  <img src="imgs1/PPThlf.png" id="PPThlfX" class="dsphdd" style="position: absolute;width: auto;margin-top: 142px;margin-left:332px;height: 375px;">
-	  <img src="imgs1/push.png" id="push3" class="dsphdd" style="position: absolute;width: auto;margin-top: 157px;margin-left:345px;height: 25px;z-index: 1;">
-
-
-	  <img src="imgs1/TB21.png" id="TB21" class="dsphdd" style="position: absolute;width: auto;margin-top: 50px;margin-left:550px;height: 400px;transform: rotate(350deg);">
-	  <img src="imgs1/TB22.png" id="TB22" class="dsphdd" style="position: absolute;width: auto;margin-top: 50px;margin-left:550px;height: 400px;transform: rotate(350deg);">
-	  <img src="imgs1/PPT3.png" id="PPT3" class="dsphdd" style="position: absolute;width: auto;margin-top: -5px;margin-left:425px;height: 375px;z-index: -1;transform: rotate(315deg);">
-	  <img src="imgs1/PPTblk.png" id="PPTblkX" class="dsphdd" style="position: absolute;width: auto;margin-top: -5px;margin-left:425px;height: 375px;z-index: -1;transform: rotate(315deg);">
-	  <img src="imgs1/push.png" id="push5" class="dsphdd" style="position: absolute;width: auto;margin-top: 52px;margin-left:325px;height: 25px;z-index: 1;">
-	  <img src="imgs1/TB31.png" id="TB31" class="dsphdd" style="position: absolute;width: auto;margin-top: 250px;margin-left:500px;height: 275px;">
-	  <img src="imgs1/TB32.png" id="TB32" class="dsphdd" style="position: absolute;width: auto;margin-top: 250px;margin-left:500px;height: 275px;">
+	  <button onclick="step4();" id="step4" style="position: absolute;width: 110px;margin-top: 210px;margin-left:300px;height: 225px;border: none;background: transparent;z-index: 1;"></button>
+	  <img src="imgs1/BTL2C.png" id="BTL2C" class="dsphd" style="position: absolute;width: auto;margin-top: 210px;margin-left:300px;height: 225px;">
+	  <img src="imgs1/BTL2O.png" id="BTL2O" class="dsphdd" style="position: absolute;width: auto;margin-top: 210px;margin-left:300px;height: 225px;">
+	  <img src="imgs1/PPThlf.png" id="PPThlfX" class="dsphdd" style="position: absolute;width: auto;margin-top: 50px;margin-left:332px;height: 375px;">
+	  <img src="imgs1/push.png" id="push3" class="dsphdd" style="position: absolute;width: auto;margin-top: 60px;margin-left:345px;height: 25px;z-index: 1;">
 
 
-	  <button onclick="step1();" id="step1" style="position: absolute;width: 375px;margin-top: 490px;margin-left:635px;height: 45px;border: none;background: transparent;z-index: 1;"></button>
-	  <img src="imgs1/PPTblk.png" id="PPTblkN" class="dsphd" style="position: absolute;width: auto;margin-top: 325px;margin-left:800px;height: 375px; transform: rotate(90deg);">
+	  <img src="imgs1/TB21.png" id="TB21" class="dsphdd" style="position: absolute;width: auto;margin-top: 60px;margin-left:550px;height: 400px;transform: rotate(350deg);">
+	  <img src="imgs1/TB22.png" id="TB22" class="dsphdd" style="position: absolute;width: auto;margin-top: 60px;margin-left:550px;height: 400px;transform: rotate(350deg);">
+	  <img src="imgs1/PPT3.png" id="PPT3" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:425px;height: 375px;z-index: -1;transform: rotate(315deg);">
+	  <img src="imgs1/PPTblk.png" id="PPTblkX" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:425px;height: 375px;z-index: -1;transform: rotate(315deg);">
+	  <img src="imgs1/push.png" id="push5" class="dsphdd" style="position: absolute;width: auto;margin-top: 57px;margin-left:325px;height: 25px;z-index: 1;">
+	  <img src="imgs1/TB31.png" id="TB31" class="dsphdd" style="position: absolute;width: auto;margin-top: 165px;margin-left:500px;height: 275px;">
+	  <img src="imgs1/TB32.png" id="TB32" class="dsphdd" style="position: absolute;width: auto;margin-top: 165px;margin-left:500px;height: 275px;">
+
+
+	  <button onclick="step1();" id="step1" style="position: absolute;width: 375px;margin-top: 400px;margin-left:635px;height: 45px;border: none;background: transparent;z-index: 1;"></button>
+	  <img src="imgs1/PPTblk.png" id="PPTblkN" class="dsphd" style="position: absolute;width: auto;margin-top: 235px;margin-left:800px;height: 375px; transform: rotate(90deg);">
 
 	  
 	  
-	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 20px;margin-top: 535px;">Glucose Sample</span>
-	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 165px;margin-top: 535px;">Alpha Naphthol</span>
-	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 310px;margin-top: 535px;">H2SO4 Acid</span>
-	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 530px;margin-top: 535px;">Test Tube</span>
-	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 750px;margin-top: 535px;">Pipette</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 20px;margin-top: 440px;">Glucose Sample</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 165px;margin-top: 440px;">Alpha Naphthol</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 310px;margin-top: 440px;">H2SO4 Acid</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 530px;margin-top: 450px;">Test Tube</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 750px;margin-top: 440px;">Pipette</span>
 
 	  
     </div>

@@ -33,13 +33,12 @@
 <body>
 
 <div class="row zero">
-    <div id="main"> 
-      <div id="myhead"><p id="masteps">The first step of this experiment is the preparation of the sample solutions (as shown in <a href="table.html" target="_blank">table</a>). To begin, click on the sample solution beaker to add the solution into the Soln.1 test tube.</p> <a id="nextstep" class="btn btn-success dsphdd" href="DNS-RS2.html"> Next Step</a>
-      </div>
-      <hr> 
-
-	  
-	  <button id="runX" class="btn btn-success dsphdd" onclick="run()" style="position: absolute;margin-left: 950px;margin-top:0px;padding: 10px 25px;">Run</button>
+	<div id="leftPanel">
+		<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+		<p id="masteps">The first step of this experiment is the preparation of the sample solutions (as shown in <a href="table.html" target="_blank">table</a>). To begin, click on the sample solution beaker to add the solution into the Soln.1 test tube.</p> <a id="nextstep" class="btn btn-success dsphdd" href="DNS-RS2.html"> Next Step</a>
+	</div>
+	<div id="main">
+	  <button id="runX" class="btn btn-success dsphdd" onclick="run()" style="position: absolute;margin-left: 950px;margin-top:0px;padding: 10px 25px;width: 100px;">Run</button>
 	  
       <img src="imgs4/PPT0.png" id="PPT01" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:50px;height: 375px;">
       <img src="imgs4/p30t.png" id="ptr1" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:50px;height: 375px;">

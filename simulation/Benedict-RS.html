@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+
+		.animate {
+            animation: circularMotion 0.75s linear infinite;
+        }
+
+	    @keyframes circularMotion {
+	        0% { transform: rotate(0deg) translateX(15px) rotate(0deg); }
+	        100% { transform: rotate(360deg) translateX(15px) rotate(-360deg); }
+	    }
+
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+		<div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">To perform this experiment, add 5mL of Benedict reagent into the test tube. For this, click on the Benedict reagent bottle.</p> <a id="nextstep" class="btn btn-success dsphdd" href="Benedict-RS-dtl.html"> Next Step</a>
+		</div>
+		<div id="main">
+	  <img src="imgs2/out5.png" id="out5" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:25px;height: 225px;">
+	  <img src="imgs2/out4.png" id="out4" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:25px;height: 225px;">
+	  <img src="imgs2/out3.png" id="out3" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:25px;height: 225px;">
+	  <img src="imgs2/out2.png" id="out2" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:25px;height: 225px;">
+	  <img src="imgs2/out1.png" id="out1" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:25px;height: 225px;">
+
+	  <img src="imgs2/firstd.png" id="firstd" class="dsphd" style="position: absolute;width: auto;margin-top: 290px;margin-left:0px;height: 125px;">
+	  <img src="imgs2/fire.gif" id="fire" class="dsphd" style="position: absolute;width: auto;margin-top: 190px;margin-left:25px;height: 100px;">
+
+
+	  <button onclick="step3();" id="step3" style="position: absolute;width: auto;margin-top: 300px;margin-left:247px;height: 225px;width:65px;background:transparent;border:none;z-index: 1;"></button>
+	  <img src="imgs2/push.png" id="push1" class="dsphdd" style="position: absolute;width: auto;margin-top: 15px;margin-left:272px;height: 21px;z-index: 3;">
+	  <img src="imgs2/drop.png" id="drop" class="dsphdd" style="position: absolute;width: auto;margin-top: 350px;margin-left:272px;height: 51px;z-index: 5;">
+	  <img src="imgs2/PPT3.png" id="PPT3X" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:257px;height: 350px;">
+	  <img src="imgs2/PPT2.png" id="PPT2" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:257px;height: 350px;">
+	  <img src="imgs2/PPT0.png" id="PPT0a" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:257px;height: 350px;">
+	  <img src="imgs2/TBblk.png" id="TBblk" class="dsphd" style="position: absolute;width: auto;margin-top: 200px;margin-left:225px;height: 225px;">
+	  <img src="imgs2/out0.png" id="out0" class="dsphdd" style="position: absolute;width: auto;margin-top: 200px;margin-left:225px;height: 225px;">
+	  <img src="imgs2/out01.png" id="out01" class="dsphdd" style="position: absolute;width: auto;margin-top: 200px;margin-left:225px;height: 225px;">
+	  <img src="imgs2/out1.png" id="out1X" class="dsphdd" style="position: absolute;width: auto;margin-top: 200px;margin-left:225px;height: 225px;">
+	  
+	  
+
+	  <img src="imgs2/PPT0.png" id="PPT0" class="dsphd" style="position: absolute;width: auto;margin-top: 225px;margin-left:470px;height: 350px; transform: rotate(90deg);">
+	  
+	  
+	  <button onclick="step1();" id="step1" style="position: absolute;width: auto;margin-top: 300px;margin-left:675px;width: 110px;height:225px; z-index: 1;background:transparent ;border: none;"></button>
+	  <img src="imgs2/push.png" id="push2" class="dsphdd" style="position: absolute;width: auto;margin-top: 65px;margin-left:723px;height: 21px;z-index: 2;">
+	  <img src="imgs2/PPT1.png" id="PPT1" class="dsphdd" style="position: absolute;width: auto;margin-top: 52px;margin-left:708px;height: 350px;z-index: 1;">
+	  <img src="imgs2/regC.png" id="regC" class="dsphd" style="position: absolute;width: auto;margin-top: 200px;margin-left:675px;height: 225px;">
+	  <img src="imgs2/regO.png" id="regO" class="dsphdd" style="position: absolute;width: auto;margin-top: 200px;margin-left:675px;height: 225px;">
+
+
+	  
+	  <button onclick="step2();" id="step2" style="position: absolute;width: auto;margin-top: 350px;margin-left:800px;height: 175px;width:140px;background: transparent;border: none;z-index: 1;"></button>
+	  <img src="imgs2/push.png" id="push3" class="dsphdd" style="position: absolute;width: auto;margin-top: 68px;margin-left:865px;height: 21px;z-index: 1;">
+	  <img src="imgs2/PPT0.png" id="PPT0b" class="dsphdd" style="position: absolute;width: auto;margin-top: 55px;margin-left:850px;height: 350px;">
+	  <img src="imgs2/PPT3.png" id="PPT3" class="dsphdd" style="position: absolute;width: auto;margin-top: 55px;margin-left:850px;height: 350px;">
+	  <img src="imgs2/smpl.png" id="smpl" class="dsphd" style="position: absolute;width: auto;margin-top: 250px;margin-left:800px;height: 175px;">
+	  
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 50px;margin-top: 435px;">Burner</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 240px;margin-top: 435px;">Test Tube</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 450px;margin-top: 435px;">Pipette</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 670px;margin-top: 435px;">Benedict Reagent</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 845px;margin-top: 435px;">Sample</span>
+	  
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+function step1()
+{
+	$("#regC").addClass("dsphdd");
+	$("#step1").addClass("dsphdd");
+	$("#regO").removeClass("dsphdd");
+	setTimeout(function() {
+	  $("#PPT0").addClass("dsphdd");
+	}, 400);
+	setTimeout(function() {
+	  $("#PPT1").removeClass("dsphdd");
+	}, 600);
+	setTimeout(function() {
+	  $("#push2").removeClass("dsphdd");
+	}, 1000);
+	setTimeout(function() {
+	  $("#push2").addClass("dsphdd");
+	}, 1800);
+	setTimeout(function() {
+	  $("#PPT1").addClass("dsphdd");
+	  $("#PPT2").removeClass("dsphdd");
+	}, 2100);
+	setTimeout(function() {
+	  $("#push1").removeClass("dsphdd");
+	  $("#drop").removeClass("dsphdd");
+	}, 2500);
+	setTimeout(function() {
+	  $("#TBblk").addClass("dsphdd");
+	  $("#out0").removeClass("dsphdd");
+	  $("#push1").addClass("dsphdd");
+	  $("#PPT2").addClass("dsphdd");
+	  $("#PPT0a").removeClass("dsphdd");
+	  $("#drop").addClass("dsphdd");
+	}, 3300);
+	setTimeout(function() {
+	  $("#PPT0a").addClass("dsphdd");
+	  $("#PPT0").removeClass("dsphdd");
+	  $("#masteps").text("Now, add 5mL of the sample solution to the test tube. To do this, click on the sample beaker.");
+	}, 3700);
+	step=1;
+}
+
+
+function step2()
+{
+	if (step==1) 
+	{
+	$("#PPT0").addClass("dsphdd");
+	$("#PPT0b").removeClass("dsphdd");
+
+	setTimeout(function() {
+	  $("#push3").removeClass("dsphdd");
+	}, 400);
+	setTimeout(function() {
+	  $("#PPT0b").addClass("dsphdd");
+	  $("#PPT3").removeClass("dsphdd");
+	  $("#push3").addClass("dsphdd");
+	}, 1000);
+	setTimeout(function() {
+	  $("#PPT3").addClass("dsphdd");
+	  $("#PPT3X").removeClass("dsphdd");
+	}, 1800);
+	setTimeout(function() {
+	  $("#push1").removeClass("dsphdd");
+	  $("#drop").removeClass("dsphdd");
+	}, 2400);
+	setTimeout(function() {
+	  $("#out0").addClass("dsphdd");
+	  $("#out01").removeClass("dsphdd");
+	  $("#push1").addClass("dsphdd");
+	  $("#drop").addClass("dsphdd");
+	  $("#PPT3X").addClass("dsphdd");
+	  $("#PPT0a").removeClass("dsphdd");
+	}, 3200);
+	setTimeout(function() {
+	  $("#PPT0a").addClass("dsphdd");
+	  $("#PPT0").removeClass("dsphdd");
+	  $("#masteps").text("Now, click on the test tube to mix the solution thoroughly, then place it on the burner to heat the sample over a flame upto 5 minuts.");
+	}, 3500);
+	
+	step=2;
+	}
+}
+
+function step3()
+{
+	var reslt = Math.floor(Math.random() * 3) + 2;
+	if (step==2) 
+	{
+	$("#out01").addClass("animate");
+
+	setTimeout(function() {
+		$("#out01").removeClass("animate");
+	}, 1200);
+	setTimeout(function() {
+		$("#out01").fadeOut(800, function () {
+                $(this).addClass("dsphdd");
+            });
+        $("#out1X").removeClass("dsphdd").hide().fadeIn(800);
+
+	}, 1300);
+	setTimeout(function() {
+	  $("#out1X").addClass("dsphdd");
+	  $("#out1").removeClass("dsphdd");
+	}, 3000);
+	setTimeout(function() {
+	  $("#out1").addClass("animate");
+	}, 3800);
+	setTimeout(function() {
+	  $("#out1").removeClass("animate");
+	}, 5000);
+
+	setTimeout(function() {
+		$("#out1").fadeOut(800, function () {
+                $(this).addClass("dsphdd");
+            });
+        $("#out"+reslt).removeClass("dsphdd").hide().fadeIn(800);
+
+    $("#nextstep").removeClass("dsphdd");
+    $("#masteps").text("Now, click on the Result Analysis button to view the interpretation of results.");
+
+	}, 5500);
+
+	
+	step=3;
+	}
+}
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,105 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What happens to non-reducing sugars during hydrolysis in the presence of dilute acid?",
+      "answers": {
+        "a": "They are oxidized to form acids.",
+        "b": "They are reduced to form aldehydes.",
+        "c": "They are converted into reducing sugars.",
+        "d": "They are precipitated out of the solution."
+      },
+      "correctAnswer": "c"
+    },
+    {
+      "question": "2. Why is the DNS method preferred over Benedict’s test for quantitative estimation?",
+      "answers": {
+        "a": "It detects non-reducing sugars directly.",
+        "b": "It forms a colored complex measurable with a spectrophotometer.",
+        "c": "It does not require heating.",
+        "d": "It is more specific to sucrose."
+      },
+      "correctAnswer": "b"
+    },
+    {
+      "question": "3. In Benedict’s test, what does the intensity of the color change (blue to brick-red) indicate?",
+      "answers": {
+        "a": "The acidity of the solution.",
+        "b": "The concentration of reducing sugars.",
+        "c": "The presence of proteins.",
+        "d": "The amount of non-reducing sugars."
+      },
+      "correctAnswer": "b"
+    },
+    {
+      "question": "4. What is the key observation in Fehling’s test for reducing sugars?",
+      "answers": {
+        "a": "Formation of a green ring.",
+        "b": "Appearance of a violet color.",
+        "c": "Formation of a brick-red precipitate.",
+        "d": "Emission of gas bubbles."
+      },
+      "correctAnswer": "c"
+    },
+    {
+      "question": "5. What is the purpose of preparing a standard curve in the DNS method?",
+      "answers": {
+        "a": "To identify the type of sugar present.",
+        "b": "To calculate the pH of the solution.",
+        "c": "To determine the exact concentration of reducing sugars in the sample.",
+        "d": "To differentiate reducing sugars from non-reducing sugars."
+      },
+      "correctAnswer": "c"
+    },
+    {
+      "question": "6. What step is essential before testing non-reducing sugars like sucrose using Benedict’s test?",
+      "answers": {
+        "a": "Adding DNS reagent.",
+        "b": "Neutralizing the solution with NaOH.",
+        "c": "Hydrolyzing with dilute acid.",
+        "d": "Boiling with Fehling’s solution."
+      },
+      "correctAnswer": "c"
+    },
+    {
+      "question": "7. Which of the following is a hydrolysis product of sucrose?",
+      "answers": {
+        "a": "Glucose and galactose",
+        "b": "Glucose and fructose",
+        "c": "Glucose and mannose",
+        "d": "Fructose and galactose"
+      },
+      "correctAnswer": "b"
+    },
+    {
+      "question": "8. Why are Fehling’s and Benedict’s tests not suitable for estimating polysaccharides like starch?",
+      "answers": {
+        "a": "Polysaccharides are too large to react with the reagent.",
+        "b": "Polysaccharides do not have free aldehyde or ketone groups.",
+        "c": "The reagents get neutralized by polysaccharides.",
+        "d": "The reaction forms a colorless product."
+      },
+      "correctAnswer": "b"
+    },
+    {
+      "question": "9. Which sugar is likely present if hydrolyzed sample tests positive, but the unhydrolyzed sample does not?",
+      "answers": {
+        "a": "Glucose",
+        "b": "Fructose",
+        "c": "Sucrose",
+        "d": "Maltose"
+      },
+      "correctAnswer": "c"
+    },
+    {
+      "question": "10.  What conclusion can be drawn if a sample does not give a positive result with Benedict’s or DNS reagent?",
+      "answers": {
+        "a": "It contains only non-reducing sugars.",
+        "b": "It contains reducing sugars.",
+        "c": "It contains proteins instead of sugars.",
+        "d": "The sample is highly acidic."
+      },
+      "correctAnswer": "a"
+    }
+  ]
+}

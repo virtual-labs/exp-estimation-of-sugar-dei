@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+	    @keyframes shakeTestTube {
+            0% { transform: rotate(0deg) translateX(0); }
+            20% { transform: rotate(-7deg) translateX(3px); }
+            40% { transform: rotate(7deg) translateX(-3px); }
+            60% { transform: rotate(-7deg) translateX(3px); }
+            80% { transform: rotate(7deg) translateX(-3px); }
+            100% { transform: rotate(0deg) translateX(0); }
+        }
+
+        .shake {
+            animation: shakeTestTube 0.5s ease-in-out 5;
+        }
+
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+	<div id="leftPanel">
+		<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+		<p id="masteps">The first step of this experiment is the preparation of the sample solutions (as shown in <a href="table.html" target="_blank">table</a>). To begin, click on the sample solution beaker to add the solution into the Soln.1 test tube.</p> <a id="nextstep" class="btn btn-success dsphdd" href="DNS-RS2.html"> Next Step</a>
+	</div>
+	<div id="main">
+	  <button id="runX" class="btn btn-success dsphdd" onclick="run()" style="position: absolute;margin-left: 950px;margin-top:0px;padding: 10px 25px;width: 100px;">Run</button>
+	  
+      <img src="imgs4/PPT0.png" id="PPT01" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:50px;height: 375px;">
+      <img src="imgs4/p30t.png" id="ptr1" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:50px;height: 375px;">
+      <img src="imgs4/ptreg.png" id="ptreg1" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:50px;height: 375px;">
+      <img src="imgs4/push.png" id="push1" class="dsphdd" style="position: absolute;width: auto;margin-top: 11px;margin-left:65px;height: 23px;">
+
+      <img src="imgs4/PPT0.png" id="PPT02" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:112px;height: 375px;">
+      <img src="imgs4/p05t.png" id="ptf1" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:112px;height: 375px;">
+      <img src="imgs4/p25t.png" id="ptr2" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:112px;height: 375px;">
+      <img src="imgs4/ptreg.png" id="ptreg2" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:112px;height: 375px;">
+      <img src="imgs4/push.png" id="push2" class="dsphdd" style="position: absolute;width: auto;margin-top: 11px;margin-left:127px;height: 23px;">
+
+      <img src="imgs4/PPT0.png" id="PPT03" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:175px;height: 375px;">
+      <img src="imgs4/p10t.png" id="ptf2" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:175px;height: 375px;">
+      <img src="imgs4/p20t.png" id="ptr3" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:175px;height: 375px;">
+      <img src="imgs4/ptreg.png" id="ptreg3" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:175px;height: 375px;">
+      <img src="imgs4/push.png" id="push3" class="dsphdd" style="position: absolute;width: auto;margin-top: 11px;margin-left:190px;height: 23px;">
+
+      <img src="imgs4/PPT0.png" id="PPT04" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:237px;height: 375px;">
+      <img src="imgs4/p15t.png" id="ptf3" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:237px;height: 375px;">
+      <img src="imgs4/p15t.png" id="ptr4" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:237px;height: 375px;">
+      <img src="imgs4/ptreg.png" id="ptreg4" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:237px;height: 375px;">
+      <img src="imgs4/push.png" id="push4" class="dsphdd" style="position: absolute;width: auto;margin-top: 11px;margin-left:252px;height: 23px;">
+
+      <img src="imgs4/PPT0.png" id="PPT05" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:298px;height: 375px;">
+       <img src="imgs4/p20t.png" id="ptf4" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:298px;height: 375px;">
+       <img src="imgs4/p10t.png" id="ptr5" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:298px;height: 375px;">
+       <img src="imgs4/ptreg.png" id="ptreg5" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:298px;height: 375px;">
+       <img src="imgs4/push.png" id="push5" class="dsphdd" style="position: absolute;width: auto;margin-top: 11px;margin-left:313px;height: 23px;">
+
+      <img src="imgs4/PPT0.png" id="PPT06" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:360px;height: 375px;">
+      <img src="imgs4/p25t.png" id="ptf5" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:360px;height: 375px;">
+      <img src="imgs4/p05t.png" id="ptr6" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:360px;height: 375px;">
+      <img src="imgs4/ptreg.png" id="ptreg6" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:360px;height: 375px;">
+      <img src="imgs4/push.png" id="push6" class="dsphdd" style="position: absolute;width: auto;margin-top: 11px;margin-left:375px;height: 23px;">
+
+	  <img src="imgs4/tbstd.png" id="tbstd" class="dsphd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tb1.png" id="tb1" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tb2.png" id="tb2" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tb3.png" id="tb3" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tb4.png" id="tb4" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tb5.png" id="tb5" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tb6.png" id="tb6" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tb7.png" id="tb7" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tb8.png" id="tb8" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tb9.png" id="tb9" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tb10.png" id="tb10" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tb11.png" id="tb11" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tbb1.png" id="tbb1" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tbb2.png" id="tbb2" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tbb3.png" id="tbb3" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tbb4.png" id="tbb4" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tbb5.png" id="tbb5" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+	  <img src="imgs4/tbb6.png" id="tbb6" class="dsphdd" style="position: absolute;width: auto;margin-top: 265px;margin-left:0px;width: 450px;">
+
+	  
+	  
+	  <img src="imgs4/PPT0.png" id="PPT07" class="dsphdd" style="position: absolute;width: auto;margin-top: 140px;margin-left:530px;height: 375px;">
+	  <img src="imgs4/push.png" id="push7" class="dsphdd" style="position: absolute;width: auto;margin-top: 150px;margin-left:545px;height: 23px;">
+	  <img src="imgs4/smpl.png" id="dwt" class="dsphd" style="position: absolute;width: auto;margin-top: 325px;margin-left:475px;height: 200px;">
+	  <button onclick="step1();" id="step1" style="position: absolute;width: auto;margin-top: 325px;margin-left:475px;height: 200px;width: 155px;background: transparent;border: none;"></button>
+	 
+	  <img src="imgs4/PPT0.png" id="PPT08" class="dsphdd" style="position: absolute;width: auto;margin-top: 140px;margin-left:710px;height: 375px;">
+	  <img src="imgs4/push.png" id="push8" class="dsphdd" style="position: absolute;width: auto;margin-top: 150px;margin-left:725px;height: 23px;">
+	  <img src="imgs4/dwt.png" id="smpl" class="dsphd" style="position: absolute;width: auto;margin-top: 325px;margin-left:650px;height: 200px;">
+	  <button onclick="step2();" id="ste2" style="position: absolute;width: auto;margin-top: 325px;margin-left:650px;height: 200px;width: 155px;background: transparent;border: none;"></button>
+
+	  <img src="imgs4/PPT0.png" id="PPT09" class="dsphdd" style="position: absolute;width: auto;margin-top: 140px;margin-left:880px;height: 375px;">
+	  <img src="imgs4/push.png" id="push9" class="dsphdd" style="position: absolute;width: auto;margin-top: 150px;margin-left:895px;height: 23px;">
+	  <img src="imgs4/reg.png" id="reg" class="dsphd" style="position: absolute;width: auto;margin-top: 325px;margin-left:825px;height: 200px;">
+	  <button onclick="stepX();" id="stepX" style="position: absolute;width: auto;margin-top: 325px;margin-left:825px;height: 200px;width: 155px;background: transparent;border: none;"></button>
+	  
+	  
+	  
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 55px;margin-top: 535px;">Blank | Soln.1 | Soln.2 | Soln.3 | Soln.4 | Soln.5</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 505px;margin-top: 535px;">Sample Solution</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 675px;margin-top: 535px;">Distilled  Water</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 860px;margin-top: 535px;">DNS Reagent</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 999px;margin-top: 535px;">Pipette</span>
+
+	  
+
+	  
+	  <img src="imgs4/PPT0.png" id="PPT0X" class="dsphd" style="position: absolute;width: auto;margin-top: 125px;margin-left:999px;height: 375px;">
+	  
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+function step1()
+{
+	$("#PPT0X").addClass("dsphdd");
+	$("#PPT07").removeClass("dsphdd");
+	setTimeout(function() {
+	  $("#push7").removeClass("dsphdd");
+	}, 400);
+	setTimeout(function() {
+	  $("#PPT07").addClass("dsphdd");
+	  $("#push7").addClass("dsphdd");
+	  $("#ptf1").removeClass("dsphdd");
+	}, 800);
+	setTimeout(function() {
+	  $("#push2").removeClass("dsphdd");
+	}, 1200);
+	setTimeout(function() {
+      $("#push2").addClass("dsphdd");
+      $("#ptf1").addClass("dsphdd");
+      $("#PPT02").removeClass("dsphdd");
+	  $("#tbstd").addClass("dsphdd");
+	  $("#tb1").removeClass("dsphdd");
+	}, 2000);
+	setTimeout(function() {
+      $("#PPT02").addClass("dsphdd");
+	  $("#PPT0X").removeClass("dsphdd");
+	  $("#runX").removeClass("dsphdd");
+	  $("#masteps").text("Now, click on the Run button to add the solution to the remaining test tubes as specified in the table.");
+	  
+	}, 2600);
+
+	step=1;
+}
+
+
+function step2()
+{
+if(step==2)
+{	
+	$("#PPT0X").addClass("dsphdd");//
+	$("#PPT08").removeClass("dsphdd");
+	setTimeout(function() {
+	  $("#push8").removeClass("dsphdd");
+	}, 400);
+	setTimeout(function() {
+	  $("#PPT08").addClass("dsphdd");
+	  $("#push8").addClass("dsphdd");
+	  $("#ptr1").removeClass("dsphdd");
+	}, 800);
+	setTimeout(function() {
+	  $("#push1").removeClass("dsphdd");
+	}, 1200);
+	setTimeout(function() {
+      $("#push1").addClass("dsphdd");
+      $("#ptr1").addClass("dsphdd");
+      $("#PPT01").removeClass("dsphdd");
+	  $("#tbstd").addClass("dsphdd");
+	  $("#tb6").removeClass("dsphdd");
+	}, 2000);
+	setTimeout(function() {
+      $("#PPT01").addClass("dsphdd");
+	  $("#PPT0X").removeClass("dsphdd");
+	  $("#runX").removeClass("dsphdd");
+	  $("#masteps").text("Now, click on the Run button to add the distilled water to the remaining test tubes as specified in the table.");
+	}, 2600);
+
+	step=3;
+
+}
+}
+
+
+function run() 
+{
+$("#runX").addClass("dsphdd");
+if(step==1)
+{
+    for (let i = 0; i < 4; i++) 
+    {
+        (function(i) {
+            setTimeout(function() {
+
+            	if (i==0) 
+            	{
+            		$("#PPT0X").addClass("dsphdd");
+            	}
+            	else
+            	{
+            		$("#PPT0"+(i+2)).addClass("dsphdd");
+            	}
+                
+            	
+				$("#PPT07").removeClass("dsphdd");
+				setTimeout(function() {
+				  $("#push7").removeClass("dsphdd");
+				}, 400);
+				setTimeout(function() {
+				  $("#PPT07").addClass("dsphdd");
+				  $("#push7").addClass("dsphdd");
+				  $("#ptf"+(i+2)).removeClass("dsphdd");
+				}, 800);
+				setTimeout(function() {
+				  $("#push"+(i+3)).removeClass("dsphdd");
+				}, 1200);
+				setTimeout(function() {
+			      $("#push"+(i+3)).addClass("dsphdd");
+			      $("#ptf"+(i+2)).addClass("dsphdd");
+			      $("#PPT0"+(i+3)).removeClass("dsphdd");
+				  $("#tb"+(i+1)).addClass("dsphdd");
+				  $("#tb"+(i+2)).removeClass("dsphdd");
+				  if (i==3) 
+	            	{
+	            		$("#PPT0"+(i+3)).addClass("dsphdd");
+	            		$("#PPT0X").removeClass("dsphdd");
+	            	}
+				}, 2000);
+
+            }, i * 2400); // Delay in milliseconds (27,200 ms)
+
+        })(i);
+    }
+
+    setTimeout(function() {
+		$("#masteps").text("Now, add distilled water to the blank test tube as specified in the table. To do this, click on the distilled water beaker.");
+	}, 9600);
+    
+ 	step=2;
+}
+
+else if(step==3)
+{
+    for (let i = 0; i < 5; i++) 
+    {
+        (function(i) {
+            setTimeout(function() {
+
+            	if (i==0) 
+            	{
+            		$("#PPT0X").addClass("dsphdd");
+            	}
+            	else
+            	{
+            		$("#PPT0"+(i+1)).addClass("dsphdd");
+            	}
+                
+            	$("#PPT0X").addClass("dsphdd");//
+				$("#PPT08").removeClass("dsphdd");
+				setTimeout(function() {
+				  $("#push8").removeClass("dsphdd");
+				}, 400);
+				setTimeout(function() {
+				  $("#PPT08").addClass("dsphdd");
+				  $("#push8").addClass("dsphdd");
+				  $("#ptr"+(i+2)).removeClass("dsphdd");
+				}, 800);
+				setTimeout(function() {
+				  $("#push"+(i+2)).removeClass("dsphdd");
+				}, 1200);
+				setTimeout(function() {
+			      $("#push"+(i+2)).addClass("dsphdd");
+			      $("#ptr"+(i+2)).addClass("dsphdd");
+			      $("#PPT0"+(i+2)).removeClass("dsphdd");
+				  $("#tb"+(i+6)).addClass("dsphdd");
+				  $("#tb"+(i+7)).removeClass("dsphdd");
+				  if (i==4) 
+	            	{
+	            		$("#PPT0"+(i+2)).addClass("dsphdd");
+	            		$("#PPT0X").removeClass("dsphdd");
+	            	}
+				}, 2000);
+
+            }, i * 2400); // Delay in milliseconds (27,200 ms)
+
+        })(i);
+    }
+
+    setTimeout(function() {
+		$("#runX").removeClass("dsphdd");
+	  $("#masteps").text("The next step is to add DNS reagent to the test tubes to prepare the samples solutions as specified in the table. To do this click on run button.");
+	}, 9600);
+
+    step=4;
+}
+
+else if(step==4)
+{
+    for (let i = 0; i < 6; i++) 
+    {
+        (function(i) {
+            setTimeout(function() {
+
+            	if (i==0) 
+            	{
+            		$("#PPT0X").addClass("dsphdd");
+            	}
+            	else
+            	{
+            		$("#PPT0"+(i)).addClass("dsphdd");
+            	}
+                
+            	$("#PPT0X").addClass("dsphdd");//
+				$("#PPT09").removeClass("dsphdd");
+				setTimeout(function() {
+				  $("#push9").removeClass("dsphdd");
+				}, 400);
+				setTimeout(function() {
+				  $("#PPT09").addClass("dsphdd");
+				  $("#push9").addClass("dsphdd");
+				  $("#ptreg"+(i+1)).removeClass("dsphdd");
+				}, 800);
+				setTimeout(function() {
+				  $("#push"+(i+1)).removeClass("dsphdd");
+				}, 1200);
+				setTimeout(function() {
+			      $("#push"+(i+1)).addClass("dsphdd");
+			      $("#ptreg"+(i+1)).addClass("dsphdd");
+			      $("#PPT0"+(i+1)).removeClass("dsphdd");
+			      if (i==0) 
+			      {
+			      	$("#tb11").addClass("dsphdd");
+			      }
+			      else
+			      {
+			      	$("#tbb"+(i)).addClass("dsphdd");
+			      }
+				  
+				  $("#tbb"+(i+1)).removeClass("dsphdd");
+				  if (i==5) 
+	            	{
+	            		$("#PPT0"+(i+1)).addClass("dsphdd");
+	            		$("#PPT0X").removeClass("dsphdd");
+	            	}
+				}, 2000);
+
+            }, i * 2400); // Delay in milliseconds (27,200 ms)
+
+        })(i);
+    }
+
+    setTimeout(function() {
+    	$("#masteps").text("To proceed further, click on the Next Step button.");
+      $("#nextstep").removeClass("dsphdd");
+	  
+	}, 9600);
+
+    step=5;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

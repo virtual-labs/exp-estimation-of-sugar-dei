@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+
+	    @keyframes shakeTestTube {
+            0% { transform: rotate(0deg) translateX(0); }
+            20% { transform: rotate(-7deg) translateX(3px); }
+            40% { transform: rotate(7deg) translateX(-3px); }
+            60% { transform: rotate(-7deg) translateX(3px); }
+            80% { transform: rotate(7deg) translateX(-3px); }
+            100% { transform: rotate(0deg) translateX(0); }
+        }
+
+        .shake {
+            animation: shakeTestTube 0.5s ease-in-out 5;
+        }
+
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+	<div id="leftPanel">
+		<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+		<p id="masteps">In this step, The samples are boiled for 5-10 minutes to develop color, then cooled to room temperature. For this, click on the test tubes to place them in the boiling water bath.</p> <a id="nextstep" class="btn btn-success dsphdd" href="DNS-RS3.html"> Next Step</a>
+	</div>
+	<div id="main"> 
+	 	<button id="runx" onclick="run();" class="btn btn-success dsphdd" style="padding: 10px 20px;position: absolute;width: 100px;">Run</button>
+
+
+	  <img src="imgs4/b1.png" id="std1" class="bwl dsphdd" style="position: absolute;height: auto;margin-top: 130px;margin-left:45px;height:210px;z-index:2;">
+	  <img src="imgs4/b1.png" id="frd1" class="awl dsphdd" style="position: absolute;height: auto;margin-top: 130px;margin-left:45px;height:210px;z-index:2;">
+
+	  <img src="imgs4/b1.png" id="std2" class="bwl dsphdd" style="position: absolute;height: auto;margin-top: 150px;margin-left:51px;height:210px;z-index:2;">
+	  <img src="imgs4/b2.png" id="frd2" class="awl dsphdd" style="position: absolute;height: auto;margin-top: 150px;margin-left:51px;height:210px;z-index:2;">
+
+	  <img src="imgs4/b1.png" id="std3" class="bwl dsphdd" style="position: absolute;height: auto;margin-top: 145px;margin-left:80px;height:210px;z-index:;">
+	  <img src="imgs4/b4.png" id="frd3" class="awl dsphdd" style="position: absolute;height: auto;margin-top: 145px;margin-left:80px;height:210px;z-index:2;">
+
+	  <img src="imgs4/b1.png" id="std4" class="bwl dsphdd" style="position: absolute;height: auto;margin-top: 130px;margin-left:95px;height:210px;z-index:2;">
+	  <img src="imgs4/b1.png" id="frd4" class="awl dsphdd" style="position: absolute;height: auto;margin-top: 130px;margin-left:95px;height:210px;z-index:2;">
+
+	  <img src="imgs4/b1.png" id="std5" class="bwl dsphdd" style="position: absolute;height: auto;margin-top: 150px;margin-left:110px;height:210px;z-index:2;">
+	  <img src="imgs4/b3.png" id="frd5" class="awl dsphdd" style="position: absolute;height: auto;margin-top: 150px;margin-left:110px;height:210px;z-index:2;">
+
+	  <img src="imgs4/b1.png" id="std6" class="bwl dsphdd" style="position: absolute;height: auto;margin-top: 145px;margin-left:137px;height:210px;z-index:2;">
+	  <img src="imgs4/b5.png" id="frd6" class="awl dsphdd" style="position: absolute;height: auto;margin-top: 145px;margin-left:137px;height:210px;z-index:2;">
+
+
+
+
+	  <img src="imgs4/wtrbth2.png" id="wtrbth" class="dsphd" style="position: absolute;height: auto;margin-top: 205px;margin-left:36px;width: 152px;z-index:5;">
+	  <img src="imgs4/brnNet.png" id="brnNet" class="dsphd" style="position: absolute;height: auto;margin-top: 322px;margin-left:0px;width: 225px;z-index: 1;">
+	  <img src="imgs4/brnstd.png" id="brnstd" class="dsphd" style="position: absolute;width: auto;margin-top: 332px;margin-left:0px;height: 200px;">
+	  <img src="imgs4/fire.gif" id="fire" class="dsphd" style="position: absolute;width: auto;margin-top: 365px;margin-left:78px;height: 60px;">
+	  <img src="imgs4/firstd.png" id="firstd" class="dsphd" style="position: absolute;width: auto;margin-top: 425px;margin-left:47px;height: 100px;">
+	  <img src="imgs4/bubble.gif" id="bubble" class="dsphd" style="position: absolute;width: auto;margin-top: 250px;margin-left:75px;height: 100px;z-index: 5;">
+
+
+
+
+	  <img src="imgs4/PPT0.png" id="ppt1" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:342px;height: 350px;">
+	  <img src="imgs4/p10t.png" id="pt1" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:342px;height: 350px;">
+	  <img src="imgs4/drop.png" id="drop1" class="dsphdd" style="position: absolute;width: auto;margin-top: 347px;margin-left:359px;height: 35px;">
+	  <img src="imgs4/push.png" id="push1" class="dsphdd" style="position: absolute;width: auto;margin-top: 11px;margin-left:357px;height: 23px;">
+
+	  <img src="imgs4/PPT0.png" id="ppt2" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:398px;height: 350px;">
+	  <img src="imgs4/p10t.png" id="pt2" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:398px;height: 350px;">
+	  <img src="imgs4/drop.png" id="drop2" class="dsphdd" style="position: absolute;width: auto;margin-top: 347px;margin-left:415px;height: 35px;">
+	  <img src="imgs4/push.png" id="push2" class="dsphdd" style="position: absolute;width: auto;margin-top: 11px;margin-left:413px;height: 23px;">
+
+	  <img src="imgs4/PPT0.png" id="ppt3" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:454px;height: 350px;">
+	  <img src="imgs4/p10t.png" id="pt3" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:454px;height: 350px;">
+	  <img src="imgs4/drop.png" id="drop3" class="dsphdd" style="position: absolute;width: auto;margin-top: 347px;margin-left:471px;height: 35px;">
+	  <img src="imgs4/push.png" id="push3" class="dsphdd" style="position: absolute;width: auto;margin-top: 11px;margin-left:469px;height: 23px;">
+
+	  <img src="imgs4/PPT0.png" id="ppt4" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:508px;height: 350px;">
+	  <img src="imgs4/p10t.png" id="pt4" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:508px;height: 350px;">
+	  <img src="imgs4/drop.png" id="drop4" class="dsphdd" style="position: absolute;width: auto;margin-top: 347px;margin-left:525px;height: 35px;">
+	  <img src="imgs4/push.png" id="push4" class="dsphdd" style="position: absolute;width: auto;margin-top: 11px;margin-left:523px;height: 23px;">
+
+	  <img src="imgs4/PPT0.png" id="ppt5" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:565px;height: 350px;">
+	  <img src="imgs4/p10t.png" id="pt5" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:565px;height: 350px;">
+	  <img src="imgs4/drop.png" id="drop5" class="dsphdd" style="position: absolute;width: auto;margin-top: 347px;margin-left:582px;height: 35px;">
+	  <img src="imgs4/push.png" id="push5" class="dsphdd" style="position: absolute;width: auto;margin-top: 11px;margin-left:580px;height: 23px;">
+
+	  <img src="imgs4/PPT0.png" id="ppt6" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:620px;height: 350px;">
+	  <img src="imgs4/p10t.png" id="pt6" class="dsphdd" style="position: absolute;width: auto;margin-top: 0px;margin-left:620px;height: 350px;">
+	  <img src="imgs4/drop.png" id="drop6" class="dsphdd" style="position: absolute;width: auto;margin-top: 347px;margin-left:637px;height: 35px;">
+	  <img src="imgs4/push.png" id="push6" class="dsphdd" style="position: absolute;width: auto;margin-top: 11px;margin-left:635px;height: 23px;">
+
+
+
+	  
+	  <img src="imgs4/tbb6.png" id="xxx" class="dsphd" style="position: absolute;width: auto;margin-top: 285px;margin-left:300px;width: 400px;">
+	  <img src="imgs4/stdblk.png" id="yyy" class="dsphdd" style="position: absolute;width: auto;margin-top: 286px;margin-left:300px;width: 400px;">
+	  <img src="imgs4/fc01.png" id="zzz" class="dsphdd" style="position: absolute;width: auto;margin-top: 285px;margin-left:300px;width: 400px;">
+	  <img src="imgs4/fc02.png" id="fc1" class="dsphdd" style="position: absolute;width: auto;margin-top: 285px;margin-left:300px;width: 400px;">
+	  <img src="imgs4/fc03.png" id="fc2" class="dsphdd" style="position: absolute;width: auto;margin-top: 285px;margin-left:300px;width: 400px;">
+	  <img src="imgs4/fc04.png" id="fc3" class="dsphdd" style="position: absolute;width: auto;margin-top: 285px;margin-left:300px;width: 400px;">
+	  <img src="imgs4/fc05.png" id="fc4" class="dsphdd" style="position: absolute;width: auto;margin-top: 285px;margin-left:300px;width: 400px;">
+	  <img src="imgs4/fc06.png" id="fc5" class="dsphdd" style="position: absolute;width: auto;margin-top: 285px;margin-left:300px;width: 400px;">
+	  <img src="imgs4/fc07.png" id="fc6" class="dsphdd" style="position: absolute;width: auto;margin-top: 285px;margin-left:300px;width: 400px;">
+	  <button onclick="step1();" id="step1" style="position: absolute;width: auto;margin-top: 285px;margin-left:300px;width: 400px;height: 250px;background-color: transparent;border: none;"></button>
+	  
+	  
+	  
+	  <img src="imgs4/PPT0.png" id="PPT07" class="dsphdd" style="position: absolute;width: auto;margin-top: 150px;margin-left:800px;height: 350px;">
+	  <img src="imgs4/p10t.png" id="p10t7" class="dsphdd" style="position: absolute;width: auto;margin-top: 150px;margin-left:800px;height: 350px;">
+	  <img src="imgs4/push.png" id="push7" class="dsphdd" style="position: absolute;width: auto;margin-top: 160px;margin-left:815px;height: 23px;">
+
+	  <button onclick="step2();" id="step2" style="position: absolute;height: auto;margin-top: 325px;margin-left:750px;height:200px;width: 155px;background-color: transparent;border: none;z-index: 1;"></button>
+	  <img src="imgs4/smpl.png" id="smpl" class="dsphd" style="position: absolute;height: auto;margin-top: 325px;margin-left:750px;height:200px;">
+
+	  <img src="imgs4/PPT0.png" id="PPT08" class="dsphd" style="position: absolute;width: auto;margin-top: 175px;margin-left:925px;height: 350px;">
+
+
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 65px;margin-top: 535px;">Waterbath Setup</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 350px;margin-top: 535px;">Blank | Sol.1 | Sol.2 | Sol.3 | Sol.4 | Sol.5</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 775px;margin-top: 535px;">40% Rochelle Salt</span>
+	  <span id="lb4" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 925px;margin-top: 535px;">Pipette</span>
+	  
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+function step1()
+{
+	$("#xxx").addClass("dsphdd");
+	$("#yyy").removeClass("dsphdd");
+	$(".bwl").removeClass("dsphdd");
+	setTimeout(function() {
+	$(".bwl").fadeOut(800, function () {
+            $(this).addClass("dsphdd");
+        });
+    $(".awl").removeClass("dsphdd").hide().fadeIn(800);
+
+	}, 4000);
+
+	setTimeout(function() {
+
+		$(".awl").addClass("dsphdd");
+		$("#yyy").addClass("dsphdd");
+		$("#zzz").removeClass("dsphdd");
+
+	}, 7000);
+
+	setTimeout(function() {
+		$("#masteps").text("After, click on the 40% Rochelle Salt solution to add 1ml of it to the test tube sample.");
+	}, 11000);
+
+	
+	
+	step=1;
+}
+
+function step2()
+{
+	if (step==1) 
+	{
+		$("#PPT08").addClass("dsphdd");
+		$("#PPT07").removeClass("dsphdd");
+		setTimeout(function() {
+			$("#push7").removeClass("dsphdd");
+		}, 400);
+		setTimeout(function() {
+			$("#push7").addClass("dsphdd");
+		}, 1000);
+		setTimeout(function() {
+			$("#PPT07").addClass("dsphdd");
+			$("#pt1").removeClass("dsphdd");
+		}, 1400);
+		setTimeout(function() {
+			$("#push1").removeClass("dsphdd");
+		}, 1800);
+		setTimeout(function() {
+			$("#push1").addClass("dsphdd");
+			$("#pt1").addClass("dsphdd");
+			$("#ppt1").removeClass("dsphdd");
+			$("#zzz").addClass("dsphdd");
+			$("#fc1").removeClass("dsphdd");
+		}, 2600);
+		setTimeout(function() {
+			$("#ppt1").addClass("dsphdd");
+			$("#PPT08").removeClass("dsphdd");
+			$("#runx").removeClass("dsphdd");
+			$("#masteps").text("Now, click on the Run button to add 40% Rochelle Salt solution to the remaining test tubes as specified in the table.");
+		}, 3000);
+	
+	step=2;
+	}
+}
+
+
+
+function run() 
+{
+	$("#runx").addClass("dsphdd");
+if(step==2)
+{
+    for (let i = 0; i < 5; i++) 
+    {
+        (function(i) {
+            setTimeout(function() {
+                
+       			$("#PPT08").addClass("dsphdd");
+				$("#PPT07").removeClass("dsphdd");
+				setTimeout(function() {
+					$("#push7").removeClass("dsphdd");
+				}, 400);
+				setTimeout(function() {
+					$("#push7").addClass("dsphdd");
+				}, 1000);
+				setTimeout(function() {
+					$("#PPT07").addClass("dsphdd");
+					$("#pt"+(i+2)).removeClass("dsphdd");
+				}, 1400);
+				setTimeout(function() {
+					$("#push"+(i+2)).removeClass("dsphdd");
+				}, 1800);
+				setTimeout(function() {
+					$("#push"+(i+2)).addClass("dsphdd");
+					$("#pt"+(i+2)).addClass("dsphdd");
+					$("#ppt"+(i+2)).removeClass("dsphdd");
+					$("#fc"+(i+1)).addClass("dsphdd");
+					$("#fc"+(i+2)).removeClass("dsphdd");
+				}, 2600);
+				setTimeout(function() {
+					$("#ppt"+(i+2)).addClass("dsphdd");
+				}, 3000);
+	
+	
+
+            }, i * 3000); // Delay in milliseconds (27,200 ms)
+
+        })(i);
+    }
+
+    setTimeout(function() {
+    	$("#nextstep").removeClass("dsphdd");
+		$("#masteps").text("To proceed further click on next step.");
+	}, 15000);
+
+ 	step=3;
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

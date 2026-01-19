@@ -14,6 +14,21 @@ Carbohydrates are one of the major classes of biomolecules, serving as primary s
 
 Understanding the chemical distinction between these sugar types is essential before performing biochemical tests, as it determines their reactivity in qualitative and quantitative assays.
 
+### Linkage in sugar molecules 
+
+The linkage between sugar units is formed by glycosidic bonds, which can vary in type (&alpha; or &beta;) and position. The cleavage of these linkages is important in estimating the concentration of sugars in a sample.
+&alpha;-Glycosidic Linkage: In an &alpha;-glycosidic linkage, the hydroxyl group on carbon 1 of one sugar is in the downward (&alpha;) position relative to the carbon chain. This type of linkage is common in disaccharides like maltose and sucrose. The linkage can be cleaved by enzymes (like amylase for starch) or under acidic conditions (acid hydrolysis) to yield simpler sugars.
+&beta;-Glycosidic Linkage: In &beta;-glycosidic linkage, the hydroxyl group on carbon 1 of one sugar is in the upward (&beta;) position. This is seen in lactose and cellulose. &beta;-linkages are more resistant to acid hydrolysis, and often, enzymatic methods (such as lactase for lactose) are used to break them down.
+
+<img src="pix/i1.png" height="250">
+
+&alpha;1 &#10230; 4 linkage Maltose linking two glucose molecules
+
+<img src="pix/i2.png" height="250">
+
+&beta;1 &#10230; 4 linkage Lactose linking galactose and glucose
+
+
 ## Qualitative Analysis of Sugars
 
 ### Molisch Test

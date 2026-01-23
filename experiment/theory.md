@@ -1,53 +1,78 @@
-### Theory
+## Theory
 
-<h2>Molisch Test</h2>
-<p>
-    The Molisch test is a qualitative test for carbohydrates. It is used to detect the presence of carbohydrates (monosaccharides, disaccharides, or polysaccharides) in a sample. The test relies on the dehydration of carbohydrates in the presence of concentrated sulfuric acid to form furfural derivatives, which react with α-naphthol to produce a colored compound.
-</p>
-<p>
-    Carbohydrates, when treated with concentrated sulfuric acid, undergo dehydration to form furfural (from pentoses) or hydroxymethylfurfural (from hexoses). These furfural derivatives react with α-naphthol, forming a purple or violet-colored ring at the interface of the solution.
-</p>
+Carbohydrates are one of the major classes of biomolecules, serving as primary sources of energy and structural components in living organisms. Chemically, they are polyhydroxy aldehydes or ketones, or compounds that yield such molecules upon hydrolysis. The general molecular formula of simple carbohydrates is C<sub>n</sub>(H<sub>2</sub>O)<sub>n</sub>, reflecting their composition of carbon, hydrogen, and oxygen.
 
-<h2>DNS (3,5-Dinitrosalicylic Acid) Method</h2>
+**Classification:**
 
-<h4>Principle:</h4>
-<p>
-    The estimation relies on the reducing property of sugars:
-</p>
-<p>
-    <strong>Chemical Reaction:</strong> Reducing sugars react with oxidizing agents, such as dinitrosalicylic acid (DNS), Fehling's solution, or Benedict’s reagent.
-</p>
-<p>
-    Reducing sugars (e.g., glucose, fructose) reduce DNS reagent under alkaline conditions to form a reddish-brown complex, 3-amino-5-nitrosalicylic acid, which absorbs light at 540 nm. The color intensity is proportional to the concentration of reducing sugars.
-</p>
-<p>
-    During this reaction, the reducing sugar donates electrons to the oxidizing agent, leading to the reduction of the oxidant and the oxidation of the sugar.
-</p>
-<p><strong>Example Reaction:</strong> R−CHO + Cu<sup>2+</sup> → R−COOH + Cu<sub>2</sub>O (precipitate)</p>
+1.  Monosaccharides - Simple sugars that cannot be hydrolyzed further (e.g., glucose, fructose).
+2.  Disaccharides - Formed by condensation of two monosaccharides (e.g., sucrose, lactose, maltose).
+3.  Polysaccharides - Complex carbohydrates composed of many monosaccharide units (e.g., starch, cellulose, glycogen).
 
-<p>
-    In the DNS method, the reduction of dinitrosalicylic acid (yellow) produces 3-amino-5-nitrosalicylic acid (orange-red).
-</p>
+**Reducing vs. Non-Reducing Sugars:**
+- Reducing sugars possess a free aldehyde (-CHO) or ketone (-C=O) group capable of acting as a reducing agent. Examples: glucose, fructose, maltose, lactose.
+- Non-reducing sugars lack a free reducing group, usually because it is involved in a glycosidic bond. Examples: sucrose, trehalose, raffinose.
 
-<h4>1. Colorimetric Detection:</h4>
-<ul>
-    <li>The intensity of the color formed is directly proportional to the concentration of reducing sugars in the sample.</li>
-    <li>This color is quantified spectrophotometrically, typically at 540 nm (DNS method) or by observing precipitate formation.</li>
-</ul>
+Understanding the chemical distinction between these sugar types is essential before performing biochemical tests, as it determines their reactivity in qualitative and quantitative assays.
 
-<h2>Benedict's Test for Reducing Sugars</h2>
-<p>
-    The Benedict test is a qualitative or semi-quantitative assay used to detect the presence of reducing sugars in a sample. Reducing sugars, such as glucose and fructose, have a free aldehyde (-CHO) or ketone (-C=O) group that reduces copper(II) sulfate in Benedict's reagent to form a precipitate.
-</p>
+### Linkage in sugar molecules 
 
-<h4>Principle:</h4>
-<p>
-    Reducing sugars react with Benedict's reagent (containing copper(II) sulfate, sodium citrate, and sodium carbonate) under heat. The reducing sugars reduce copper(II) ions (Cu²⁺) to copper(I) oxide (Cu₂O), which forms a precipitate. The color and intensity of the precipitate depend on the sugar concentration.
-</p>
+The linkage between sugar units is formed by glycosidic bonds, which can vary in type (&alpha; or &beta;) and position. The cleavage of these linkages is important in estimating the concentration of sugars in a sample.
+&alpha;-Glycosidic Linkage: In an &alpha;-glycosidic linkage, the hydroxyl group on carbon 1 of one sugar is in the downward (&alpha;) position relative to the carbon chain. This type of linkage is common in disaccharides like maltose and sucrose. The linkage can be cleaved by enzymes (like amylase for starch) or under acidic conditions (acid hydrolysis) to yield simpler sugars.
+&beta;-Glycosidic Linkage: In &beta;-glycosidic linkage, the hydroxyl group on carbon 1 of one sugar is in the upward (&beta;) position. This is seen in lactose and cellulose. &beta;-linkages are more resistant to acid hydrolysis, and often, enzymatic methods (such as lactase for lactose) are used to break them down.
+
+<img src="pix/i1.png" height="300">
+
+&alpha;1 &#10230; 4 linkage Maltose linking two glucose molecules
+
+<img src="pix/i2.png" height="300">
+
+&beta;1 &#10230; 4 linkage Lactose linking galactose and glucose
 
 
-<h2>Applications of Methods</h2>
-<ol>
-    <li><strong>DNS Method:</strong> High sensitivity and commonly used in research labs for quantitative analysis.</li>
-    <li><strong>Benedict’s Test:</strong> Simple and semi-quantitative; suitable for teaching or rough estimation.</li>
-</ol>
+## Qualitative Analysis of Sugars
+
+### Molisch Test
+The Molisch test detects the presence of carbohydrates based on their dehydration to furfural derivatives by concentrated sulfuric acid, which react with α-naphthol to form a violet-colored complex.
+**Chemical Reaction:**
+
+Carbohydrate &xrarr; Furfural / Hydroxymethylfurfural (under Conc. H<sub>2</sub>SO<sub>4</sub>, Dehydration)
+
+Furfural+ &alpha;-naphthol &xrarr; Violet (purple) condensation product
+
+### Reducing Sugars
+
+**(a) DNS (3,5-Dinitrosalicylic Acid) Method**
+
+This method quantifies reducing sugars based on their ability to donate electrons under alkaline conditions, reducing yellow 3,5-dinitrosalicylic acid (DNS) to the orange-red 3-amino-5-nitrosalicylic acid.
+
+**Chemical Reaction:**
+Reducing Sugar (R-CHO) + DNS &xrarr; 3-amino-5-nitrosalicylic acid (orange-red) + Oxidized Sugar (R-COOH)
+
+The absorbance of the colored product is measured at 540 nm, and its intensity is proportional to the concentration of reducing sugars.
+
+**(b) Benedict's Test**
+Benedict's reagent (containing CuSO<sub>4</sub>, sodium carbonate, and sodium citrate) detects reducing sugars via reduction of Cu<sup>2+</sup> to Cu<sub>2</sub>O under alkaline conditions and heat.
+
+**Chemical Reaction:**
+
+R-CHO+2Cu<sup>2+</sup>+5OH<sup>-</sup> &xrarr; R-COO<sup>-</sup> + Cu<sub>2</sub>O (brick-red)+3H<sub>2+</sub>O 
+
+
+**Observation:**
+Blue &xrarr; No reducing sugar
+Green &xrarr; Trace amount
+Yellow to Brick-red &xrarr; Increasing concentration of reducing sugars
+ 
+### Non-Reducing Sugars
+
+**Hydrolysis and DNS Method**
+Non-reducing sugars such as sucrose are hydrolyzed by acid into their reducing monosaccharide components before applying the DNS method.
+**Hydrolysis Reaction:**
+C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>+H<sub>2</sub>O &xrarr; C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>(Glucose)+C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>(Fructose) //(under H<sup>+</sup> and heat)
+
+After hydrolysis, the reducing ends of glucose and fructose can react with DNS reagent as in the reducing sugar assay.
+
+## Applications of Methods
+1. **DNS Method:** High sensitivity and commonly used in research labs for quantitative analysis.
+2. **Benedict's Test:** Simple and semi-quantitative; suitable for teaching or rough estimation.
+3. **Hydrolysis + DNS:** Enables total sugar estimation by accounting for non-reducing sugars.

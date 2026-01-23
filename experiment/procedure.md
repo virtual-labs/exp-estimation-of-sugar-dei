@@ -1,132 +1,105 @@
-### Procedure
+## Procedure
 
-<h2>Molisch Test</h2>
+[Simulator-Guided Step-by-Step Procedure of the Experiment](procedurex.html) 
 
-<h3>Reagents</h3>
-<ul>
-    <li>Molisch reagent: A 10% solution of α-naphthol in ethanol.</li>
-    <li>Concentrated sulfuric acid (H₂SO₄): Used for dehydration.</li>
-</ul>
+---
 
-<h3>Procedure</h3>
-<ol>
-    <li>Take 5 mL of the test solution in a clean test tube.</li>
-    <li>Add 2–3 drops of Molisch reagent and mix gently.</li>
-    <li>Carefully pour 2 mL of concentrated sulfuric acid along the walls of the test tube to form a layer beneath the mixture (do not mix).</li>
-    <li>Observe the interface between the two layers:
-        <ul>
-            <li>A purple or violet ring indicates the presence of carbohydrates.</li>
-        </ul>
-    </li>
-</ol>
+## Molisch Test
 
-<h3>Interpretation</h3>
-<ul>
-    <li><strong>Positive Test (Violet Ring):</strong> Presence of carbohydrates (mono-, di-, or polysaccharides).</li>
-    <li><strong>Negative Test:</strong> Absence of carbohydrates.</li>
-</ul>
+**Reagents**
+- Molisch reagent: A 10% solution of &alpha;-naphthol in ethanol.
+- Concentrated sulfuric acid (H<sub>2</sub>SO<sub>4</sub>): Used for dehydration.
 
-<h3>Applications</h3>
-<ol>
-    <li>To confirm the presence of carbohydrates in food, biological samples, or chemical preparations.</li>
-    <li>To differentiate carbohydrates from other biomolecules, as proteins and lipids do not typically yield a positive Molisch test.</li>
-</ol>
+**Procedure**
 
-<h3>Limitations</h3>
-<ul>
-    <li>This test is non-specific; it only confirms the presence of carbohydrates but does not differentiate between types of carbohydrates.</li>
-    <li>Glycoproteins and glycolipids may also give a positive result due to their carbohydrate moieties.</li>
-</ul>
+1. Take 5 mL of the test solution in a clean test tube.
+2. Add 2-3 drops of Molisch reagent and mix gently.
+3. Carefully pour 2 mL of concentrated sulfuric acid along the walls of the test tube to form a layer beneath the mixture (do not mix).
+4. Observe the interface between the two layers:
+- A purple or violet ring indicates the presence of carbohydrates.
 
-<h2>DNS (3,5-Dinitrosalicylic Acid) Method for Reducing Sugar</h2>
+**Interpretation**
 
-<h3>Reagents</h3>
-<ul>
-    <li>DNS reagent: Dissolve 1 g DNS in 50 mL distilled water and dilute to 100 mL.</li>
-</ul>
+- **Positive Test (Violet Ring)**: Presence of carbohydrates (mono-, di-, or polysaccharides).
+- **Negative Test:** Absence of carbohydrates.
 
-<h3>Procedure</h3>
-<ol>
-    <li>Take 10 mL of sample solution (diluted appropriately as specified in the experimental table).</li>
-    <li>Add 3 mL of DNS reagent.</li>
-    <li>Boil the mixture in a water bath for 5–10 minutes.</li>
-    <li>Cool the mixture and add 10 mL of distilled water.</li>
-    <li>Add 1 mL of 40% Rochelle Salt (sodium potassium tartrate) solution.</li>
-    <li>Measure absorbance at 540 nm against a blank (sample without DNS reagent).</li>
-</ol>
+**Applications**
 
-<h3>Calculation</h3>
-<ul>
-    <li>Prepare a standard curve using glucose or other reducing sugars.</li>
-    <li>Compare the absorbance of samples to the standard curve to determine sugar concentration.</li>
-</ul>
+1. To confirm the presence of carbohydrates in food, biological samples, or chemical preparations.
+2. To differentiate carbohydrates from other biomolecules, as proteins and lipids do not typically yield a positive Molisch test.
 
+**Limitations**
 
-<h2>Benedict’s Method for Reducing Sugars</h2>
+- This test is non-specific; it only confirms the presence of carbohydrates but does not differentiate between types of carbohydrates.
+- Glycoproteins and glycolipids may also give a positive result due to their carbohydrate moieties.
 
-<h3>Reagents</h3>
-<ul>
-    <li>Benedict’s reagent: Mix 17.3 g CuSO₄·5H₂O, 100 g sodium citrate, and 70 g sodium carbonate in 1 L of water.</li>
-    <li><strong>Preparation:</strong> Dissolve sodium carbonate and sodium citrate in ~800 mL of distilled water. Add copper(II) sulfate solution slowly while stirring. Adjust the volume to 1 L with distilled water.</li>
-</ul>
+## DNS (3,5-Dinitrosalicylic Acid) Method for Reducing Sugar
 
-<h3>Sample Preparation</h3>
-<ul>
-    <li>If the sample is solid, dissolve it in distilled water to prepare a solution.</li>
-    <li>If the sugar concentration is too high, dilute the sample appropriately.</li>
-</ul>
+**Reagents**
+- DNS reagent: Dissolve 1g DNS in 50 mL distilled water and dilute to 100 mL.
 
-<h3>Procedure</h3>
-<ol>
-    <li>Mix 5 mL of Benedict’s reagent with 5 mL of the sample.</li>
-    <li>Heat in a boiling water bath for 5 minutes.</li>
-    <li>Cool and observe the color change (green, yellow, orange, or red, depending on sugar concentration).</li>
-</ol>
+**Procedure**
+1. Take 10 mL of sample solution (diluted appropriately as specified in the experimental table).
+2. Add 3 mL of DNS reagent.
+3. Boil the mixture in a water bath for 5-10 minutes.
+4. Cool the mixture and add 10 mL of distilled water.
+5. Add 1 mL of 40% Rochelle Salt (sodium potassium tartrate) solution.
+6. Measure absorbance at 540 nm against a blank (sample without DNS reagent).
 
-<h3>Observation</h3>
-<ul>
-    <li>A color change indicates the presence of reducing sugars.</li>
-    <li><strong>Color scale for semi-quantitative analysis:</strong>
-        <ul>
-            <li>Blue: No reducing sugar</li>
-            <li>Green: Trace amounts of reducing sugar</li>
-            <li>Yellow: Low concentration of reducing sugar</li>
-            <li>Orange: Moderate concentration of reducing sugar</li>
-            <li>Brick red: High concentration of reducing sugar</li>
-        </ul>
-    </li>
-</ul>
+**Calculation**
+- Prepare a standard curve using glucose or other reducing sugars.
+- Compare the absorbance of samples to the standard curve to determine sugar concentration.
 
-<h3>Calculation</h3>
-<ul>
-    <li>Semi-quantitative based on the intensity of the color or quantitative with a spectrophotometer (read at 635 nm).</li>
-</ul>
+## Benedict's Method for Reducing Sugars
 
-<h3>Interpretation</h3>
-<ul>
-    <li><strong>Positive Result:</strong> Green, yellow, orange, or brick-red precipitate confirms the presence of reducing sugars.</li>
-    <li><strong>Negative Result:</strong> Blue solution indicates absence of reducing sugars.</li>
-</ul>
+**Reagents**
+
+- Benedict's reagent: Mix 17.3g CuSO<sub>4</sub>5H<sub>2</sub>O, 100 g sodium citrate, and 70g sodium carbonate in 1 L of water.
+- Preparation: Dissolve sodium carbonate and sodium citrate in ~800 mL of distilled water. Add copper sulfate solution slowly while stirring. Adjust the volume to 1 L with distilled water.
+
+**Sample Preparation**
+
+- If the sample is solid, dissolve it in distilled water to prepare a solution.
+- If the sugar concentration is too high, dilute the sample appropriately.
+
+**Procedure**
+
+- Mix 5 mL of Benedict's reagent with 5 mL of the sample.
+- Heat in a boiling water bath for 5 minutes.
+- Cool and observe the color change (green, yellow, orange, or red, depending on sugar concentration).
+
+**Observation**
+
+A color change indicates the presence of reducing sugars.
+
+Color scale for semi-quantitative analysis
+- Blue: No reducing sugar
+- Green: Trace amounts of reducing sugar
+- Yellow: Low concentration of reducing sugar
+- Orange: Moderate concentration of reducing sugar
+- Brick red: High concentration of reducing sugar
+
+**Calculation**
+- Semi-quantitative based on the intensity of the color or quantitative with a spectrophotometer (read at 635 nm).
+
+**Interpretation**
+
+- **Positive Result:** Green, yellow, orange, or brick-red precipitate confirms the presence of reducing sugars.
+- **Negative Result:** Blue solution indicates absence of reducing sugars.
 
 
-<h2>Non-Reducing Sugars Test</h2>
+## Non-Reducing Sugars Test
 
-<h3>Reagents</h3>
-<ul>
-    <li>1 N HCl</li>
-    <li>DNS reagent (as described above)</li>
-    <li>40% NaOH</li>
-</ul>
+**Reagents**
+- 1 N HCl
+- DNS reagent (as described above)
+- 40% NaOH
 
-<h3>Procedure</h3>
-<ol>
-    <li><strong>Hydrolysis:</strong> Mix 2 mL of the sample with 2 mL of 1 N HCl.</li>
-    <li>Heat in a boiling water bath for 10 minutes.</li>
-    <li>Neutralize with 1 mL of 1 N NaOH.</li>
-    <li>Proceed with the DNS method to measure reducing sugars as described earlier.</li>
-</ol>
+**Procedure**
+1. Hydrolysis: Mix 2 mL of the sample with 2 mL of 1 N HCl.
+2. Heat in a boiling water bath for 10 minutes.
+3. Neutralize with 1 mL of 1 N NaOH.
+4. Proceed with the DNS method to measure reducing sugars as described earlier.
 
-<h3>Calculation</h3>
-<ul>
-    <li>Subtract the initial reducing sugar content (pre-hydrolysis) from the total sugar content (post-hydrolysis) to determine the non-reducing sugar content.</li>
-</ul>
+**Calculation**
+- Subtract the initial reducing sugar content (pre-hydrolysis) from the total sugar content (post-hydrolysis) to determine the non-reducing sugar content.

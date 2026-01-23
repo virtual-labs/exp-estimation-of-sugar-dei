@@ -34,13 +34,12 @@
 <body>
 
 <div class="row zero">
-    <div id="main"> 
-      <div id="myhead"><p id="masteps">In this step of the experiment, we measure the absorbance of the sample solutions at 540 nm. To do this, click on the micropipette. </p> <a id="nextstep" class="btn btn-success dsphdd" href="calculator.html"> Next Step</a>
-      </div>
-      <hr> 
-
-	  
-	 <button id="runx" onclick="run();" class="btn btn-success dsphdd" style="padding: 10px 20px;position: absolute;">Run</button>
+	<div id="leftPanel">
+		<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+		<p id="masteps">In this step of the experiment, we measure the absorbance of the sample solutions at 540 nm. To do this, click on the micropipette.</p> <a id="nextstep" class="btn btn-success dsphdd" href="calculator.html"> Next Step</a>
+	</div>
+	<div id="main"> 
+	 <button id="runx" onclick="run();" class="btn btn-success dsphdd" style="padding: 10px 20px;position: absolute;width: 100px;">Run</button>
 
 
 
